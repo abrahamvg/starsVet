@@ -13,8 +13,10 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
   background-color:#fefef2;
+  color: var(--blue);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
