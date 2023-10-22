@@ -59,26 +59,26 @@ export default function Home() {
         </div>
         <p className="w-1/2 mx-auto text-base mt-8 font-thin"> We take pride in being your top choice as pet doctors. Our expertise extends beyond cats and dogs; we specialize in exotic veterinary care, catering to a wide range of unique and small-sized pets.</p>
         <div className="flex flex-row justify-center w-full mt-20 flex-wrap gap-4 px-10">
-          <ReptileCard heading ={"Reptiles"} 
+          <AnimalCard heading ={"Reptiles"} 
           description = {"Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."}imageUrl = {"reptile"}/>
 
-          <ReptileCard heading ={"Rabbits"} 
+          <AnimalCard heading ={"Rabbits"} 
           description = {"With extensive knowledge, experience, and skill, we excel in maintaining the health of rabbits, surpassing mere carrot-based care."}
           imageUrl = {"rabbit"}/>
 
-          <ReptileCard heading ={"Birds"} 
+          <AnimalCard heading ={"Birds"} 
           description = {"Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."}
           imageUrl = {"bird"}/>
 
-          <ReptileCard heading ={"Guinea Pigs"} 
+          <AnimalCard heading ={"Guinea Pigs"} 
           description = {"Stars Vet specializes in guinea pigs, providing superior care, treatment, and support to ensure optimal health for your beloved companions."}
           imageUrl = {"guineaPig"}/>
 
-          <ReptileCard heading ={"Fish"} 
+          <AnimalCard heading ={"Fish"} 
           description = {"Stars Vet offers a comprehensive array of services, including fish surgery, catering to fish of diverse shapes and sizes."}
           imageUrl = {"fish"}/>
 
-          <ReptileCard heading ={"Amphibians"} 
+          <AnimalCard heading ={"Amphibians"} 
           description = {"Having trouble finding a vet for your frog or axolotl? Look no more. Our skilled veterinarians offer advanced care for all amphibians."}
           imageUrl = {"amphibian"}/>
         </div>
@@ -110,7 +110,7 @@ function Card({ heading, imageUrl, description }) {
   );
 }
 
-function ReptileCard({heading,description, imageUrl}){
+function AnimalCard({heading,description, imageUrl}){
   return(
     <>
     <div className="reptile-card relative">
