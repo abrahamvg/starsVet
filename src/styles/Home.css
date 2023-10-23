@@ -1,5 +1,5 @@
 .home{
-    height: calc(100vh - 120px);
+    height: calc(100vh - 96px);
     position: relative;
 }
 
@@ -10,13 +10,16 @@
     flex-direction: row;
     gap: 16px;
     position: absolute;
+    bottom: -240px;
     justify-content: center;
+    align-items: center;
 
     margin-top: 40px;
     padding: 0 36px;
 
     z-index: 2;
 
+    text-align: left;
 }
 
 .card{
@@ -26,6 +29,8 @@
     padding: 24px 36px;
 
     background: url("../images/card-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 20px;
 
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
@@ -41,7 +46,7 @@
 }
 
 .header h3{
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 32px;
     font-weight: 800;
 
@@ -66,6 +71,7 @@
     color: var(--teal);
 
     width: 80%;
+    height: calc(100% - 90px);
 }
 .description a {
     display: flex;
@@ -77,6 +83,7 @@
 }
 
 .banner{
+    /* background = image location | repeat option | x y coordinates | size */
     background: 
         url("../images/dog.svg") no-repeat -5% -5% / 20%,
         url("../images/cat.svg") no-repeat 100% -5% / 20%;
@@ -84,7 +91,7 @@
 }
 
 .reptile-card{
-    width: 440px;
+    width: 400px;
     height: 244px;
     border-radius: 18px;
 
@@ -115,4 +122,213 @@
 
     background: var(--green);
 
+}
+.slider-animal-desc{
+    display: none;
+}
+
+@media(max-width:1280px){
+
+    .card{
+        padding: 24px; 
+
+        height: 280px;
+    }
+
+    .card .header h3{
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+    }
+
+    .card .description{
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+    }
+    .header-icon{
+        width: 50px;
+        height: 50px;
+    }
+    .header-icon img{
+        height: 1.75rem;
+    }
+
+    .reptile-card{
+        width: 360px;
+    }
+    .reptile-card h2{
+        font-size: 1.7rem;
+    }
+    .reptile-card p{
+        font-size: 0.7rem
+    }
+    .reptile-card a{
+        font-size: 0.8rem
+    }
+    .reptile-card img{
+        height: 18rem;
+    }
+    .banner h3{
+        font-size: 1.75rem;
+    }
+    .banner h2{
+        font-size: 3.75rem;
+    }
+    .banner{
+        background: 
+        url("../images/dog.svg") no-repeat -5% -25% / 20%,
+        url("../images/cat.svg") no-repeat 100% -25% / 20%;
+        background-color: var(--green);
+    }
+    .animal-info .heading{
+        font-size: 5.2rem;
+    }
+    .animal-description{
+        font-size: 1rem;
+        line-height: 1.2rem;
+        width: 70%;
+    }
+
+}
+
+@media(max-width:1160px){
+    .reptile-card{
+        width: 300px;
+        height: 212px;
+    }
+    .reptile-card p {
+        font-size: 0.65rem;
+        line-height: 0.75rem;
+    }
+    .reptile-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width: 1000px){
+    .cards{
+        flex-direction: column;
+        bottom: -380px;
+
+    }
+    .card{
+        width: 90%;
+        height: 200px;
+    }
+    .banner-content{
+        height: 60rem;
+    }
+
+}
+@media(max-width: 900px){
+    .home div{
+        font-size: 5.2rem;
+    }
+    .grid-animal-desc{
+        display: none;
+    }
+    .slider-animal-desc{
+        display: block;
+    }
+    .banner h3{
+        font-size: 1.45rem;
+    }
+    .banner h2{
+        font-size: 3rem;
+    }
+    .banner{
+        background: 
+        url("../images/dog.svg") no-repeat -5% -35% / 25%,
+        url("../images/cat.svg") no-repeat 100% -15% / 25%;
+        background-color: var(--green);
+    }
+    .reptile-card{
+        width: 400px;
+        height: 244px;
+
+        padding: 12px 16px;
+    }
+    .reptile-card h2{
+        font-size: 2rem;
+    }
+    .reptile-card p{
+        font-size: 0.8rem;
+        line-height: 1rem;;
+    }
+    .reptile-card a{
+        font-size: 1rem
+    }
+    .reptile-card img{
+        height: 18rem;
+    }
+    .animal-heading{
+        font-size: 5rem;
+        width: 500px;
+        margin: auto;
+    }
+}
+
+@media(max-width: 768px){
+    .home div{
+        font-size: 4rem;
+    }
+    .banner-content{
+        height: 56rem;
+    }
+    .banner{
+        margin-bottom: 3rem;
+        padding: 8px 12px;
+        height: 15rem;
+    }
+    .banner{
+        /* background = image location | repeat option | x y coordinates | size */
+        background: 
+            url("../images/dog.svg") no-repeat -20% -35% / 40%,
+            url("../images/cat.svg") no-repeat 120% -35% / 40%;
+        background-color: var(--green);
+    }
+    .banner h2{
+        width: 28rem;
+    }
+    .banner p{
+       font-size: 0.85rem;
+    }
+    .mySwiper{
+        width: 90%;
+    }
+    .animal-heading{
+        font-size: 4rem;
+        width: 24rem;
+    }
+    .animal-description{
+        font-size: 0.85rem;
+        width: 90%;
+    }
+}
+
+@media(max-width: 600px){
+    .reptile-card{
+        width: 300px;
+        height: 212px;
+    }
+    .reptile-card p {
+        font-size: 0.65rem;
+        line-height: 0.75rem;
+    }
+    .reptile-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width: 480px){
+    .home-header{
+        margin-left: 1rem;
+    }
+    .home-header h1{
+        font-size: 3rem;
+    }
+    .card .description{
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+        margin-top: 8px;
+    }
 }
