@@ -182,7 +182,7 @@
     .animal-info .heading{
         font-size: 5.2rem;
     }
-    .animal-info .heading .animal-description{
+    .animal-description{
         font-size: 1rem;
         line-height: 1.2rem;
         width: 70%;
@@ -220,11 +220,26 @@
 
 }
 @media(max-width: 900px){
+    .home div{
+        font-size: 5.2rem;
+    }
     .grid-animal-desc{
         display: none;
     }
     .slider-animal-desc{
         display: block;
+    }
+    .banner h3{
+        font-size: 1.45rem;
+    }
+    .banner h2{
+        font-size: 3rem;
+    }
+    .banner{
+        background: 
+        url("../images/dog.svg") no-repeat -5% -35% / 25%,
+        url("../images/cat.svg") no-repeat 100% -15% / 25%;
+        background-color: var(--green);
     }
     .reptile-card{
         width: 400px;
@@ -244,5 +259,76 @@
     }
     .reptile-card img{
         height: 18rem;
+    }
+    .animal-heading{
+        font-size: 5rem;
+        width: 500px;
+        margin: auto;
+    }
+}
+
+@media(max-width: 768px){
+    .home div{
+        font-size: 4rem;
+    }
+    .banner-content{
+        height: 56rem;
+    }
+    .banner{
+        margin-bottom: 3rem;
+        padding: 8px 12px;
+        height: 15rem;
+    }
+    .banner{
+        /* background = image location | repeat option | x y coordinates | size */
+        background: 
+            url("../images/dog.svg") no-repeat -20% -35% / 40%,
+            url("../images/cat.svg") no-repeat 120% -35% / 40%;
+        background-color: var(--green);
+    }
+    .banner h2{
+        width: 28rem;
+    }
+    .banner p{
+       font-size: 0.85rem;
+    }
+    .mySwiper{
+        width: 90%;
+    }
+    .animal-heading{
+        font-size: 4rem;
+        width: 24rem;
+    }
+    .animal-description{
+        font-size: 0.85rem;
+        width: 90%;
+    }
+}
+
+@media(max-width: 600px){
+    .reptile-card{
+        width: 300px;
+        height: 212px;
+    }
+    .reptile-card p {
+        font-size: 0.65rem;
+        line-height: 0.75rem;
+    }
+    .reptile-card h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width: 480px){
+    .home-header{
+        margin-left: 1rem;
+    }
+    .home-header h1{
+        font-size: 3rem;
+    }
+    .card .description{
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+        margin-top: 8px;
     }
 }

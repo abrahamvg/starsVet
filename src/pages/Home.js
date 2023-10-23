@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Navbar />
       <section className="bg-green w-full pt-12 home relative">
-        <div className="text-left font-extrabold text-teal text-8xl ml-16 bottom-20 absolute">
+        <div className="home-header text-left font-extrabold text-teal text-8xl ml-16 bottom-20 absolute">
           <h1> Care </h1>
           <h1> Compassion </h1>
           <h1> Conservation </h1>
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-teal w-full h-[42rem] relative rounded-l-3xl rounded-r-3xl -mt-6 banner-content">
-        <div className="banner w-full h-52 bg-green text-teal mb-28 bottom-0 left-1/2 transform -translate-x-1/2 absolute py-4 px-8">
+        <div className="banner w-full h-52 bg-green text-teal mb-28 bottom-0 left-1/2 transform -translate-x-1/2 absolute py-4 px-8 flex flex-col justify-center items-center">
           <h3 className="font-semibold text-4xl">Welcome to the</h3>
           <h2 className="font-semibold text-7xl mt-2">
             Stars Vet Animal & Bird Clinic
@@ -62,7 +62,7 @@ export default function Home() {
       </section>
       <section className="w-full animal-info">
         <div className="heading text-8xl font-bold">
-          <p>
+          <p className="animal-heading">
             <span className="text-green">Exotic Pets</span> We Treat
           </p>
           <p className="animal-description w-1/2 mx-auto text-base mt-8 font-thin">
@@ -138,7 +138,7 @@ export default function Home() {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper w-4/5 flex flex-row justify-center h-[20rem]"
+            className="mySwiper w-[80%]  flex flex-row justify-center h-[20rem]"
           >
             <SwiperSlide>
               <AnimalCard
