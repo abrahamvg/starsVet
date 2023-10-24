@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -68,7 +69,7 @@ export default function Home() {
 					/>
 				</div>
 			</section>
-			<section className="bg-teal w-full h-[42rem] relative rounded-l-3xl rounded-r-3xl -mt-6 banner-content">
+			<section className="bg-teal w-full h-[42rem] relative rounded-tl-3xl rounded-tr-3xl -mt-6 banner-content">
 				<div className="banner w-full h-52 bg-green text-teal mb-28 bottom-0 left-1/2 transform -translate-x-1/2 absolute py-4 px-8 flex flex-col justify-center items-center">
 					<h3 className="font-semibold text-4xl">Welcome to the</h3>
 					<h2 className="font-semibold text-7xl mt-2">
@@ -371,6 +372,10 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+			<section className="w-full h-96">
+
+			</section>
+			<Footer/>
 		</>
 	);
 }
