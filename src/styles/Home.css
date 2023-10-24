@@ -1,334 +1,532 @@
-.home{
-    height: calc(100vh - 96px);
-    position: relative;
+.home {
+	height: calc(100vh - 96px);
+	position: relative;
 }
 
-.cards{
-    width: 100vw;
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    position: absolute;
-    bottom: -240px;
-    justify-content: center;
-    align-items: center;
+.cards {
+	width: 100vw;
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	position: absolute;
+	bottom: -240px;
+	justify-content: center;
+	align-items: center;
 
-    margin-top: 40px;
-    padding: 0 36px;
+	margin-top: 40px;
+	padding: 0 36px;
 
-    z-index: 2;
+	z-index: 2;
 
-    text-align: left;
+	text-align: left;
 }
 
-.card{
-    height: 296px;
-    width: 100%;
+.card {
+	height: 296px;
+	width: 100%;
 
-    padding: 24px 36px;
+	padding: 24px 36px;
 
-    background: url("../images/card-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px;
+	background: url("../images/card-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 20px;
 
-    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+	box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
-.header{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+.header {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 
-    justify-content: space-between;
-    align-items: center;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.header h3{
-    font-size: 2rem;
-    line-height: 32px;
-    font-weight: 800;
+.header h3 {
+	font-size: 2rem;
+	line-height: 32px;
+	font-weight: 800;
 
-    width: 20%;
+	width: 20%;
 
-    color: var(--teal);
+	color: var(--teal);
 
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
-.header-icon{
-    background-color: var(--blue);
-    width: 60px;
-    height: 60px;
+.header-icon {
+	background-color: var(--blue);
+	width: 60px;
+	height: 60px;
 
-    border-radius: 50%;
+	border-radius: 50%;
 }
 
-.description{
-    margin-top: 20px;
-    text-align: left;
+.description {
+	margin-top: 20px;
+	text-align: left;
 
-    color: var(--teal);
+	color: var(--teal);
 
-    width: 80%;
-    height: calc(100% - 90px);
+	width: 80%;
+	height: calc(100% - 90px);
 }
 .description a {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
-.description a::after{
-    font-family: 'Material Symbols Outlined';
-    content: '\e5e1';
-}
-
-.banner{
-    /* background = image location | repeat option | x y coordinates | size */
-    background: 
-        url("../images/dog.svg") no-repeat -5% -5% / 20%,
-        url("../images/cat.svg") no-repeat 100% -5% / 20%;
-    background-color: var(--green);
+.description a::after {
+	font-family: "Material Symbols Outlined";
+	content: "\e5e1";
 }
 
-.reptile-card{
-    width: 400px;
-    height: 244px;
-    border-radius: 18px;
-
-    padding: 12px 16px;
-
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-
-    box-shadow: 0px 3.79837px 20.89106px 0px rgba(0, 0, 0, 0.20);
+.banner {
+	/* background = image location | repeat option | x y coordinates | size */
+	background: url("../images/dog.svg") no-repeat -5% -5% / 20%,
+		url("../images/cat.svg") no-repeat 100% -5% / 20%;
+	background-color: var(--green);
 }
 
-.reptile-card a{
-    display: flex;
-    align-items: center;
+.reptile-card {
+	width: 400px;
+	height: 244px;
+	border-radius: 18px;
+
+	padding: 12px 16px;
+
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+
+	box-shadow: 0px 3.79837px 20.89106px 0px rgba(0, 0, 0, 0.2);
 }
 
-.reptile-card a::after{
-    font-family: 'Material Symbols Outlined';
-    content: '\e5e1';
+.reptile-card a {
+	display: flex;
+	align-items: center;
 }
 
-.reptile-card .circle{
-    border-radius: 50%;
-    height: 20rem;
-    width: 20rem;
-    margin-top: 40px;
-
-    background: var(--green);
-
-}
-.slider-animal-desc{
-    display: none;
+.reptile-card a::after {
+	font-family: "Material Symbols Outlined";
+	content: "\e5e1";
 }
 
-@media(max-width:1280px){
+.reptile-card .circle {
+	border-radius: 50%;
+	height: 20rem;
+	width: 20rem;
+	margin-top: 40px;
 
-    .card{
-        padding: 24px; 
-
-        height: 280px;
-    }
-
-    .card .header h3{
-        font-size: 1.6rem;
-        line-height: 1.6rem;
-    }
-
-    .card .description{
-        font-size: 0.9rem;
-        line-height: 1.1rem;
-    }
-    .header-icon{
-        width: 50px;
-        height: 50px;
-    }
-    .header-icon img{
-        height: 1.75rem;
-    }
-
-    .reptile-card{
-        width: 360px;
-    }
-    .reptile-card h2{
-        font-size: 1.7rem;
-    }
-    .reptile-card p{
-        font-size: 0.7rem
-    }
-    .reptile-card a{
-        font-size: 0.8rem
-    }
-    .reptile-card img{
-        height: 18rem;
-    }
-    .banner h3{
-        font-size: 1.75rem;
-    }
-    .banner h2{
-        font-size: 3.75rem;
-    }
-    .banner{
-        background: 
-        url("../images/dog.svg") no-repeat -5% -25% / 20%,
-        url("../images/cat.svg") no-repeat 100% -25% / 20%;
-        background-color: var(--green);
-    }
-    .animal-info .heading{
-        font-size: 5.2rem;
-    }
-    .animal-description{
-        font-size: 1rem;
-        line-height: 1.2rem;
-        width: 70%;
-    }
-
+	background: var(--green);
+}
+.slider-animal-desc {
+	display: none;
 }
 
-@media(max-width:1160px){
-    .reptile-card{
-        width: 300px;
-        height: 212px;
-    }
-    .reptile-card p {
-        font-size: 0.65rem;
-        line-height: 0.75rem;
-    }
-    .reptile-card h2 {
-        font-size: 1.4rem;
-    }
+.why_choose_us {
+	margin-top: 145px;
+}
+.why-vector {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: baseline;
+}
+.wh-vector {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.vector-description {
+	color: #021939;
+	text-align: center;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 116%; /* 27.84px */
+	letter-spacing: -0.48px;
 }
 
-@media(max-width: 1000px){
-    .cards{
-        flex-direction: column;
-        bottom: -380px;
-
-    }
-    .card{
-        width: 90%;
-        height: 200px;
-    }
-    .banner-content{
-        height: 60rem;
-    }
-
-}
-@media(max-width: 900px){
-    .home div{
-        font-size: 5.2rem;
-    }
-    .grid-animal-desc{
-        display: none;
-    }
-    .slider-animal-desc{
-        display: block;
-    }
-    .banner h3{
-        font-size: 1.45rem;
-    }
-    .banner h2{
-        font-size: 3rem;
-    }
-    .banner{
-        background: 
-        url("../images/dog.svg") no-repeat -5% -35% / 25%,
-        url("../images/cat.svg") no-repeat 100% -15% / 25%;
-        background-color: var(--green);
-    }
-    .reptile-card{
-        width: 400px;
-        height: 244px;
-
-        padding: 12px 16px;
-    }
-    .reptile-card h2{
-        font-size: 2rem;
-    }
-    .reptile-card p{
-        font-size: 0.8rem;
-        line-height: 1rem;;
-    }
-    .reptile-card a{
-        font-size: 1rem
-    }
-    .reptile-card img{
-        height: 18rem;
-    }
-    .animal-heading{
-        font-size: 5rem;
-        width: 500px;
-        margin: auto;
-    }
+.services_block {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 60px;
+	grid-column-gap: 50px;
 }
 
-@media(max-width: 768px){
-    .home div{
-        font-size: 4rem;
-    }
-    .banner-content{
-        height: 56rem;
-    }
-    .banner{
-        margin-bottom: 3rem;
-        padding: 8px 12px;
-        height: 15rem;
-    }
-    .banner{
-        /* background = image location | repeat option | x y coordinates | size */
-        background: 
-            url("../images/dog.svg") no-repeat -20% -35% / 40%,
-            url("../images/cat.svg") no-repeat 120% -35% / 40%;
-        background-color: var(--green);
-    }
-    .banner h2{
-        width: 28rem;
-    }
-    .banner p{
-       font-size: 0.85rem;
-    }
-    .mySwiper{
-        width: 90%;
-    }
-    .animal-heading{
-        font-size: 4rem;
-        width: 24rem;
-    }
-    .animal-description{
-        font-size: 0.85rem;
-        width: 90%;
-    }
+.services_left {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	row-gap: 24px;
 }
 
-@media(max-width: 600px){
-    .reptile-card{
-        width: 300px;
-        height: 212px;
-    }
-    .reptile-card p {
-        font-size: 0.65rem;
-        line-height: 0.75rem;
-    }
-    .reptile-card h2 {
-        font-size: 1.4rem;
-    }
+.services_right {
+	position: relative;
+	left: 0;
+	top: 0;
+	display: table;
+}
+.services_right > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+.services_left_content {
+	overflow: hidden;
+	width: calc(100vw / 4 - 50px);
+	height: 345px;
+	padding: 25px 10px 0px 10px;
+	flex-shrink: 0;
+	border-radius: 17.984px;
+	border: 1px solid var(--Green, #06a37e);
+	background: var(--Teal-white, #fefef2);
 }
 
-@media(max-width: 480px){
-    .home-header{
-        margin-left: 1rem;
-    }
-    .home-header h1{
-        font-size: 3rem;
-    }
-    .card .description{
-        font-size: 0.8rem;
-        line-height: 0.9rem;
-        margin-top: 8px;
-    }
+.services_left_header {
+	margin-top: 20px;
+	color: var(--Aqua-Blue, #021939);
+	text-align: center;
+	font-size: 40.776px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%; /* 45.776px */
+}
+
+.services_left_middle {
+	margin-top: 30px;
+	height: 90px;
+	color: var(--Aqua-Blue, #021939);
+	text-align: center;
+	font-size: 14.986px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 120%; /* 17.984px */
+	letter-spacing: 0.3px;
+}
+
+.services_left_link {
+	margin-top: 45px;
+	color: #000;
+	text-align: center;
+	font-size: 14.986px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 100%; /* 14.986px */
+}
+.services_left_item img {
+	height: 134px;
+	width: 134px;
+	position: relative;
+	overflow: hidden;
+	margin-top: -95px;
+	margin-left: calc(50% + 35px);
+}
+.bandage_img {
+	transform: rotate(-17.046deg);
+}
+.services_right img {
+	width: 838.956px;
+	height: 700.174px;
+	transform: rotate(-4.542deg);
+	flex-shrink: 0;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.services_right_img2 {
+	margin-top: -100%;
+	z-index: 1;
+}
+
+@media (max-width: 1280px) {
+	.card {
+		padding: 24px;
+
+		height: 280px;
+	}
+
+	.card .header h3 {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
+
+	.card .description {
+		font-size: 0.9rem;
+		line-height: 1.1rem;
+	}
+	.header-icon {
+		width: 50px;
+		height: 50px;
+	}
+	.header-icon img {
+		height: 1.75rem;
+	}
+
+	.reptile-card {
+		width: 360px;
+	}
+	.reptile-card h2 {
+		font-size: 1.7rem;
+	}
+	.reptile-card p {
+		font-size: 0.7rem;
+	}
+	.reptile-card a {
+		font-size: 0.8rem;
+	}
+	.reptile-card img {
+		height: 18rem;
+	}
+	.banner h3 {
+		font-size: 1.75rem;
+	}
+	.banner h2 {
+		font-size: 3.75rem;
+	}
+	.banner {
+		background: url("../images/dog.svg") no-repeat -5% -25% / 20%,
+			url("../images/cat.svg") no-repeat 100% -25% / 20%;
+		background-color: var(--green);
+	}
+	.animal-info .heading {
+		font-size: 5.2rem;
+	}
+	.animal-description {
+		font-size: 1rem;
+		line-height: 1.2rem;
+		width: 70%;
+	}
+}
+
+@media (max-width: 1160px) {
+	.reptile-card {
+		width: 300px;
+		height: 212px;
+	}
+	.reptile-card p {
+		font-size: 0.65rem;
+		line-height: 0.75rem;
+	}
+	.reptile-card h2 {
+		font-size: 1.4rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.cards {
+		flex-direction: column;
+		bottom: -380px;
+	}
+	.card {
+		width: 90%;
+		height: 200px;
+	}
+	.banner-content {
+		height: 60rem;
+	}
+}
+@media (max-width: 900px) {
+	.home div {
+		font-size: 5.2rem;
+	}
+	.grid-animal-desc {
+		display: none;
+	}
+	.slider-animal-desc {
+		display: block;
+	}
+	.banner h3 {
+		font-size: 1.45rem;
+	}
+	.banner h2 {
+		font-size: 3rem;
+	}
+	.banner {
+		background: url("../images/dog.svg") no-repeat -5% -35% / 25%,
+			url("../images/cat.svg") no-repeat 100% -15% / 25%;
+		background-color: var(--green);
+	}
+	.reptile-card {
+		width: 400px;
+		height: 244px;
+
+		padding: 12px 16px;
+	}
+	.reptile-card h2 {
+		font-size: 2rem;
+	}
+	.reptile-card p {
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+	.reptile-card a {
+		font-size: 1rem;
+	}
+	.reptile-card img {
+		height: 18rem;
+	}
+	.animal-heading {
+		font-size: 5rem;
+		width: 500px;
+		margin: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.home div {
+		font-size: 4rem;
+	}
+	.banner-content {
+		height: 56rem;
+	}
+	.banner {
+		margin-bottom: 3rem;
+		padding: 8px 12px;
+		height: 15rem;
+	}
+	.banner {
+		/* background = image location | repeat option | x y coordinates | size */
+		background: url("../images/dog.svg") no-repeat -20% -35% / 40%,
+			url("../images/cat.svg") no-repeat 120% -35% / 40%;
+		background-color: var(--green);
+	}
+	.banner h2 {
+		width: 28rem;
+	}
+	.banner p {
+		font-size: 0.85rem;
+	}
+	.mySwiper {
+		width: 90%;
+	}
+	.animal-heading {
+		font-size: 4rem;
+		width: 24rem;
+	}
+	.animal-description {
+		font-size: 0.85rem;
+		width: 90%;
+	}
+}
+
+@media (max-width: 600px) {
+	.reptile-card {
+		width: 300px;
+		height: 212px;
+	}
+	.reptile-card p {
+		font-size: 0.65rem;
+		line-height: 0.75rem;
+	}
+	.reptile-card h2 {
+		font-size: 1.4rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.home-header {
+		margin-left: 1rem;
+	}
+	.home-header h1 {
+		font-size: 3rem;
+	}
+	.card .description {
+		font-size: 0.8rem;
+		line-height: 0.9rem;
+		margin-top: 8px;
+	}
+}
+
+.CustomerReviewCards {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	overflow-x: scroll;
+	width: 98vw;
+	gap: 32px;
+	margin-left: 2vh;
+}
+.CustomerReviewCards {
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+}
+.CustomerReviewCards::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
+}
+
+.review {
+	border-radius: 16.687px;
+	border: 0.834px solid #139f7e;
+	background: #e5f9e9;
+	width: 826px;
+	height: 484.754px;
+	flex-shrink: 0;
+	text-align: start;
+}
+
+.review_header {
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+	margin-left: 34px;
+	gap:20px;
+	align-items: center;
+	text-align: start;
+}
+.review_photo {
+	width: 133px;
+	height: 133px;
+	flex-shrink: 0;
+	border-radius: 50%;
+}
+
+.review_photo img{
+	border-radius: 50%;
+}
+
+.review_header_text{
+	display: flex;
+	flex-direction:column;
+}
+.review_header_name{
+	color: #139F7E;
+font-size: 37.721px;
+font-style: normal;
+font-weight: 500;
+line-height: 90%; /* 33.949px */
+}
+
+.review_header_date{
+	margin-top: 8px;
+	color: #139F7E;
+font-size: 20.024px;
+font-style: normal;
+font-weight: 300;
+line-height: 90%; /* 18.022px */
+}
+
+.review_content{
+	margin-top:70px;
+	margin-left: 34px;
+}
+
+.review_title{
+	color: #139F7E;
+font-size: 41.717px;
+font-style: normal;
+font-weight: 600;
+line-height: 90%; /* 37.545px */
+}
+
+.review_description{
+	margin-top: 12px;
+	color: #139F7E;
+font-size: 26.699px;
+font-style: normal;
+font-weight: 400;
+line-height: 90%; /* 24.029px */
 }
