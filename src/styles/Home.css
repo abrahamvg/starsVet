@@ -582,11 +582,17 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  overflow-x: scroll;
+  overflow-x: auto;
   width: 98vw;
   gap: 32px;
   margin-left: 2vh;
 }
+
+.gradient{
+  z-index: 2;
+  background: linear-gradient(90deg, #FEFEF2 0%,#FEFEF2 20%, rgba(254, 254, 242, 0) 50%);
+}
+
 .CustomerReviewCards {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */

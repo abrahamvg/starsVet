@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { TileLayer, Marker, Popup, MapContainer, useMapEvents } from "react-leaflet";
+import {
+  TileLayer,
+  Marker,
+  Popup,
+  MapContainer,
+  useMapEvents,
+} from "react-leaflet";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -39,6 +45,58 @@ export default function Home() {
     center: [26.90252478221893, 75.75198555898737],
     zoom: 19,
   };
+
+  const sliderRef = useRef(null);
+  let mouseDown = false;
+  let startX, scrollLeft;
+
+  useEffect(() => {
+    const startDragging = (e) => {
+      mouseDown = true;
+      startX = e.pageX - sliderRef.current.offsetLeft;
+      scrollLeft = sliderRef.current.scrollLeft;
+    };
+
+    const stopDragging = (e) => {
+      mouseDown = false;
+    };
+
+    const move = (e) => {
+      e.preventDefault();
+      if (!mouseDown) {
+        return;
+      }
+      const x = e.pageX - sliderRef.current.offsetLeft;
+      const scroll = x - startX;
+      sliderRef.current.scrollLeft = scrollLeft - scroll;
+    };
+
+    // Add the event listeners
+    if (sliderRef.current) {
+      sliderRef.current.addEventListener("mousemove", move, false);
+      sliderRef.current.addEventListener("mousedown", startDragging, false);
+      sliderRef.current.addEventListener("mouseup", stopDragging, false);
+      sliderRef.current.addEventListener("mouseleave", stopDragging, false);
+    }
+
+    // Cleanup event listeners when the component unmounts
+    return () => {
+      if (sliderRef.current) {
+        sliderRef.current.removeEventListener("mousemove", move, false);
+        sliderRef.current.removeEventListener(
+          "mousedown",
+          startDragging,
+          false
+        );
+        sliderRef.current.removeEventListener("mouseup", stopDragging, false);
+        sliderRef.current.removeEventListener(
+          "mouseleave",
+          stopDragging,
+          false
+        );
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -350,40 +408,41 @@ export default function Home() {
         <div className="why-choose-us mt-24">
           <div className="heading text-8xl font-bold mb-10">
             <p className="animal-heading">
-              <span className="text-green">Reviews</span>
+              <span className="text-green">Testimonials</span>
             </p>
           </div>
-          <div className="CustomerReviewCards">
-            <CustomerReviewCards
-              name={review[0].name}
-              date={review[0].date}
-              title={review[0].title}
-              description={review[0].description}
-              img={review[0].img}
-            />
-            <CustomerReviewCards
-              name={review[0].name}
-              date={review[0].date}
-              title={review[0].title}
-              description={review[0].description}
-              img={review[0].img}
-            />
-            <CustomerReviewCards
-              name={review[0].name}
-              date={review[0].date}
-              title={review[0].title}
-              description={review[0].description}
-              img={review[0].img}
-            />
-            <CustomerReviewCards
-              name={review[0].name}
-              date={review[0].date}
-              title={review[0].title}
-              description={review[0].description}
-              img={review[0].img}
-            />
+            <div className="CustomerReviewCards pl-48" ref={sliderRef}>
+              <CustomerReviewCards
+                name={review[0].name}
+                date={review[0].date}
+                title={review[0].title}
+                description={review[0].description}
+                img={review[0].img}
+              />
+              <CustomerReviewCards
+                name={review[0].name}
+                date={review[0].date}
+                title={review[0].title}
+                description={review[0].description}
+                img={review[0].img}
+              />
+              <CustomerReviewCards
+                name={review[0].name}
+                date={review[0].date}
+                title={review[0].title}
+                description={review[0].description}
+                img={review[0].img}
+              />
+              <CustomerReviewCards
+                name={review[0].name}
+                date={review[0].date}
+                title={review[0].title}
+                description={review[0].description}
+                img={review[0].img}
+              />
+            </div>
           </div>
-        </div>
+
       </section>
       <section className="w-full map py-10 max-xl:py-8">
         <div className="heading text-8xl font-bold mt-12 max-lg:mt-20  max-md:mt-16">
@@ -400,9 +459,16 @@ export default function Home() {
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
           />
-          <Marker position={state.center} eventHandlers={{
-            dblclick: (e) =>{window.open('https://www.google.com/maps/place/Stars+Vet+Animal+and+Bird+Clinic/@26.9026889,75.751359,18.5z/data=!4m6!3m5!1s0x396db3e2327609c5:0x86bf91c39ce4aee!8m2!3d26.9025137!4d75.7519906!16s%2Fg%2F11skvtvsgv?entry=ttu')}
-          }}>
+          <Marker
+            position={state.center}
+            eventHandlers={{
+              dblclick: (e) => {
+                window.open(
+                  "https://www.google.com/maps/place/Stars+Vet+Animal+and+Bird+Clinic/@26.9026889,75.751359,18.5z/data=!4m6!3m5!1s0x396db3e2327609c5:0x86bf91c39ce4aee!8m2!3d26.9025137!4d75.7519906!16s%2Fg%2F11skvtvsgv?entry=ttu"
+                );
+              },
+            }}
+          >
             <Popup>
               <img className="inline h-10" src="logo192.png" alt="logo" />
               <p className="font-bold text-aquaBlue">
