@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { TileLayer, Marker, Popup, MapContainer } from "react-leaflet";
+import { TileLayer, Marker, Popup, MapContainer, useMapEvents } from "react-leaflet";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -391,14 +391,23 @@ export default function Home() {
             <span className="text-green">Visit</span> Us At
           </h2>
         </div>
-        <MapContainer center={state.center} zoom={state.zoom}>
+        <MapContainer
+          center={state.center}
+          zoom={state.zoom}
+          scrollWheelZoom={false}
+        >
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
           />
-          <Marker position={state.center}>
+          <Marker position={state.center} eventHandlers={{
+            dblclick: (e) =>{window.open('https://www.google.com/maps/place/Stars+Vet+Animal+and+Bird+Clinic/@26.9026889,75.751359,18.5z/data=!4m6!3m5!1s0x396db3e2327609c5:0x86bf91c39ce4aee!8m2!3d26.9025137!4d75.7519906!16s%2Fg%2F11skvtvsgv?entry=ttu')}
+          }}>
             <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
+              <img className="inline h-10" src="logo192.png" alt="logo" />
+              <p className="font-bold text-aquaBlue">
+                Stars Vet Animal & Bird Clinic
+              </p>
             </Popup>
           </Marker>
         </MapContainer>
