@@ -170,7 +170,7 @@
   justify-content: center;
   padding-right: 4rem;
 }
-.services_right div img{
+.services_right div img {
   height: 600px;
   width: fit-content;
 }
@@ -255,23 +255,125 @@
   border: none;
 }
 
-.leaflet-popup-content{
+.leaflet-popup-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
-.leaflet-popup-content p{
+.leaflet-popup-content p {
   margin: 0;
 }
+
+.CustomerReviewCards {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow-x: auto;
+  width: 98vw;
+  gap: 32px;
+  margin-left: 2vh;
+}
+
+.gradient {
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    #fefef2 0%,
+    #fefef2 20%,
+    rgba(254, 254, 242, 0) 50%
+  );
+}
+
+.CustomerReviewCards {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.CustomerReviewCards::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.review {
+  border-radius: 16px;
+  border: 0.834px solid #139f7e;
+  background: #e5f9e9;
+  width: 680px;
+  height: 400px;
+  flex-shrink: 0;
+  text-align: start;
+}
+
+.review_header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-left: 34px;
+  gap: 20px;
+  align-items: center;
+  text-align: start;
+}
+.review_photo {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.review_photo img {
+  border-radius: 50%;
+}
+
+.review_header_text {
+  display: flex;
+  flex-direction: column;
+}
+.review_header_name {
+  color: #139f7e;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%; /* 33.949px */
+}
+
+.review_header_date {
+  margin-top: 12px;
+  color: #139f7e;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 90%; /* 18.022px */
+}
+
+.review_content {
+  margin-top: 48px;
+  margin-left: 34px;
+}
+
+.review_title {
+  color: #139f7e;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%; /* 37.545px */
+}
+
+.review_description {
+  margin-top: 12px;
+  color: #139f7e;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 24.029px */
+}
+
 @media (max-width: 1440px) {
-  .services_left{
+  .services_left {
     padding-left: 2.75rem;
-  } 
-  .services_left_header{
+  }
+  .services_left_header {
     font-size: 36px;
   }
-  .services_left_middle{
+  .services_left_middle {
     font-size: 14px;
   }
   .services_left_content {
@@ -279,10 +381,10 @@
     width: 300px;
     height: 320px;
   }
-  .services_right{
+  .services_right {
     padding-right: 2.75rem;
   }
-  .services_right div img{
+  .services_right div img {
     height: 500px;
   }
 }
@@ -354,7 +456,7 @@
     margin-bottom: 5rem;
     border-radius: 12px;
   }
-  .services_left{
+  .services_left {
     margin: auto;
     padding: 0;
     justify-content: center;
@@ -367,7 +469,7 @@
     width: 360px;
     height: 320px;
   }
-  .services_right{
+  .services_right {
     display: none;
   }
 }
@@ -473,21 +575,37 @@
     width: 500px;
     margin: auto;
   }
-  .services_left{
+  .services_left {
     width: 90%;
   }
-  .services_left_header{
+  .services_left_header {
     font-size: 30px;
   }
-  .services_left_middle{
+  .services_left_middle {
     font-size: 14px;
   }
   .services_left_content {
     width: 320px;
     height: 320px;
   }
+  .CustomerReviewCards {
+    gap: 36px;
+  }
+  .review {
+    width: 640px;
+    height: 400px;
+  }
+  .review_header_name{
+    font-size: 32px;
+  }
+  .review_title{
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .review_content {
+    margin-top: 32px;
+  }
 }
-
 @media (max-width: 768px) {
   .home div {
     font-size: 4rem;
@@ -560,6 +678,33 @@
     margin-bottom: 5rem;
     border-radius: 12px;
   }
+  .CustomerReviewCards {
+    gap: 40px;
+  }
+  .review {
+    width: 600px;
+    height: 360px;
+  }
+  .review_photo {
+    width: 80px;
+    height: 80px;
+  }
+  .review_header_name{
+    font-size: 28px;
+  }
+  .review_header_date{
+    font-size: 16px;
+  }
+  .review_title{
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .review_description {
+    font-size: 22px;
+  }
+  .review_content {
+    margin-top: 32px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -625,100 +770,4 @@
     margin-bottom: 4rem;
     border-radius: 12px;
   }
-}
-
-.CustomerReviewCards {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  overflow-x: auto;
-  width: 98vw;
-  gap: 32px;
-  margin-left: 2vh;
-}
-
-.gradient{
-  z-index: 2;
-  background: linear-gradient(90deg, #FEFEF2 0%,#FEFEF2 20%, rgba(254, 254, 242, 0) 50%);
-}
-
-.CustomerReviewCards {
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
-.CustomerReviewCards::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
-}
-
-.review {
-  border-radius: 16.687px;
-  border: 0.834px solid #139f7e;
-  background: #e5f9e9;
-  width: 826px;
-  height: 484.754px;
-  flex-shrink: 0;
-  text-align: start;
-}
-
-.review_header {
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-  margin-left: 34px;
-  gap: 20px;
-  align-items: center;
-  text-align: start;
-}
-.review_photo {
-  width: 133px;
-  height: 133px;
-  flex-shrink: 0;
-  border-radius: 50%;
-}
-
-.review_photo img {
-  border-radius: 50%;
-}
-
-.review_header_text {
-  display: flex;
-  flex-direction: column;
-}
-.review_header_name {
-  color: #139f7e;
-  font-size: 37.721px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 90%; /* 33.949px */
-}
-
-.review_header_date {
-  margin-top: 8px;
-  color: #139f7e;
-  font-size: 20.024px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 90%; /* 18.022px */
-}
-
-.review_content {
-  margin-top: 70px;
-  margin-left: 34px;
-}
-
-.review_title {
-  color: #139f7e;
-  font-size: 41.717px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 90%; /* 37.545px */
-}
-
-.review_description {
-  margin-top: 12px;
-  color: #139f7e;
-  font-size: 26.699px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 90%; /* 24.029px */
 }

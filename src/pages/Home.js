@@ -404,7 +404,7 @@ export default function Home() {
         </div>
       </section>
       <section id ="testimonials">
-        <div className="why-choose-us mt-24">
+        <div className="mt-32 max-md:mt-[6rem]">
           <div className="heading text-8xl font-bold mb-10">
             <p className="animal-heading">
               <span className="text-green">Testimonials</span>
@@ -444,7 +444,7 @@ export default function Home() {
 
       </section>
       <section id ="visitUs" className="w-full map py-10 max-xl:py-8" >
-        <div className="heading text-8xl font-bold mt-12 max-lg:mt-20  max-md:mt-16">
+        <div className="heading text-8xl font-bold mt-32 max-md:mt-[6rem]">
           <h2 className="animal-heading">
             <span className="text-green">Visit</span> Us At
           </h2>
