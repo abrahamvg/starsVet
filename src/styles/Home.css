@@ -148,35 +148,37 @@
 }
 
 .services_block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   margin-top: 60px;
-  grid-column-gap: 50px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .services_left {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  row-gap: 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 56%;
+  /* padding-left: 4rem; */
 }
 
 .services_right {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: table;
+  display: flex;
+  justify-content: center;
+  padding-right: 4rem;
 }
-.services_right > div {
-  display: table-cell;
-  vertical-align: middle;
+.services_right div img{
+  height: 600px;
+  width: fit-content;
 }
 .services_left_content {
   overflow: hidden;
-  width: calc(100vw / 4 - 50px);
-  height: 345px;
-  padding: 25px 10px 0px 10px;
+  width: 320px;
+  height: 340px;
+  padding: 25px 16px 0px 16px;
   flex-shrink: 0;
   border-radius: 17.984px;
   border: 1px solid var(--Green, #06a37e);
@@ -262,7 +264,28 @@
 .leaflet-popup-content p{
   margin: 0;
 }
-
+@media (max-width: 1440px) {
+  .services_left{
+    padding-left: 2.75rem;
+  } 
+  .services_left_header{
+    font-size: 36px;
+  }
+  .services_left_middle{
+    font-size: 14px;
+  }
+  .services_left_content {
+    overflow: hidden;
+    width: 300px;
+    height: 320px;
+  }
+  .services_right{
+    padding-right: 2.75rem;
+  }
+  .services_right div img{
+    height: 500px;
+  }
+}
 @media (max-width: 1280px) {
   .card {
     padding: 24px;
@@ -330,6 +353,22 @@
     margin: 3.6rem auto;
     margin-bottom: 5rem;
     border-radius: 12px;
+  }
+  .services_left{
+    margin: auto;
+    padding: 0;
+    justify-content: center;
+    width: 80%;
+  }
+  .services_left_header {
+    margin-top: 12px;
+  }
+  .services_left_content {
+    width: 360px;
+    height: 320px;
+  }
+  .services_right{
+    display: none;
   }
 }
 
@@ -433,6 +472,19 @@
     font-size: 5rem;
     width: 500px;
     margin: auto;
+  }
+  .services_left{
+    width: 90%;
+  }
+  .services_left_header{
+    font-size: 30px;
+  }
+  .services_left_middle{
+    font-size: 14px;
+  }
+  .services_left_content {
+    width: 320px;
+    height: 320px;
   }
 }
 

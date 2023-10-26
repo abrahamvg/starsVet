@@ -300,7 +300,7 @@ export default function Home() {
               small-sized pets.
             </p>
           </div>
-          <div className="why-vector my-20">
+          <div className="why-vector my-20 max-lg:my-12 max-md:my-11">
             <div className="wh-vector w-80 max-lg:w-[]">
               <img className ="h-28 max-xl:h-24 max-lg:h-24 max-md:h-20 max-sm:h-16" src={doctor} alt="" />
               <p className="vector-description w-3/5 font-semibold my-4 text-xl max-xl:text-lg max-lg:text-base max-md:text-base max-sm:text-sm">
@@ -323,12 +323,12 @@ export default function Home() {
         </div>
       </section>
       <section id ="ourServices">
-        <div className="our_services mt-24">
+        <div className="mt-32 max-md:mt-[6rem]">
           <div className="heading text-8xl font-bold">
             <p className="animal-heading">
               Our <span className="text-green">Services</span>
             </p>
-            <p className="animal-description w-3/4 mx-auto text-base mt-8 font-thin">
+            <p className="animal-description w-1/2 mx-auto text-base mt-8 font-thin">
               We take pride in being your top choice as pet doctors. Our
               expertise extends beyond cats and dogs; we specialize in exotic
               veterinary care, catering to a wide range of unique and
@@ -337,7 +337,7 @@ export default function Home() {
           </div>
           <div className="services_block">
             <div className="services_left">
-              <div className="services_left_item services_left_item1">
+              <div className="services_left_item">
                 <div className="services_left_content">
                   <p className="services_left_header">Healthcare Packages</p>
                   <p className="services_left_middle">
@@ -349,7 +349,7 @@ export default function Home() {
                   <img src={vaccine} alt="" />
                 </div>
               </div>
-              <div className="services_left_item services_left_item2">
+              <div className="services_left_item">
                 <div className="services_left_content">
                   <p className="services_left_header">
                     Sterilization (Desexing)
@@ -363,7 +363,7 @@ export default function Home() {
                   <img src={bandage} alt="" className="bandage_img" />
                 </div>
               </div>
-              <div className="services_left_item services_left_item3">
+              <div className="services_left_item">
                 <div className="services_left_content">
                   <p className="services_left_header ">General Health Check</p>
                   <p className="services_left_middle">
@@ -375,7 +375,7 @@ export default function Home() {
                   <img src={pad} alt="" />
                 </div>
               </div>
-              <div className="services_left_item services_left_item4">
+              <div className="services_left_item">
                 <div className="services_left_content">
                   <p className="services_left_header">
                     Surgery and Anaesthesia
