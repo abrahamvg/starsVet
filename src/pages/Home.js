@@ -101,7 +101,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <section className="bg-green w-full pt-12 home relative">
+      <section className="bg-green w-full pt-12 home relative" id ="home">
         <div className="home-header text-left font-extrabold text-teal text-8xl ml-16 bottom-20 absolute">
           <h1> Care </h1>
           <h1> Compassion </h1>
@@ -134,7 +134,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="bg-teal w-full h-[42rem] relative rounded-tl-3xl rounded-tr-3xl -mt-6 banner-content">
+      <section id ="banner" className="bg-teal w-full h-[42rem] relative rounded-tl-3xl rounded-tr-3xl -mt-6 banner-content">
         <div className="banner w-full h-52 bg-green text-teal mb-28 bottom-0 left-1/2 transform -translate-x-1/2 absolute py-4 px-8 flex flex-col justify-center items-center">
           <h3 className="font-semibold text-4xl">Welcome to the</h3>
           <h2 className="font-semibold text-7xl mt-2">
@@ -145,13 +145,12 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="w-full animal-info">
-        <div className="heading text-8xl font-bold">
+      <section id ="speciesWeTreat" className="w-full">
+        <div className="text-8xl font-bold">
           <p className="animal-heading">
             <span className="text-green">Exotic Pets</span> We Treat
           </p>
           <p className="animal-description w-1/2 mx-auto text-base mt-8 font-thin">
-            {" "}
             We take pride in being your top choice as pet doctors. Our expertise
             extends beyond cats and dogs; we specialize in exotic veterinary
             care, catering to a wide range of unique and small-sized pets.
@@ -288,42 +287,42 @@ export default function Home() {
           </Swiper>
         </div>
       </section>
-      <section>
-        <div className="why_choose_us">
+      <section id ="whyChooseUs">
+        <div className="mt-32 max-md:mt-[6rem]">
           <div className="heading text-8xl font-bold">
             <p className="animal-heading">
               Why <span className="text-green">Choose</span> Us?
             </p>
-            <p className="animal-description w-3/4 mx-auto text-base mt-8 font-thin">
+            <p className="animal-description w-1/2 mx-auto text-base mt-8 font-thin">
               We take pride in being your top choice as pet doctors. Our
               expertise extends beyond cats and dogs; we specialize in exotic
               veterinary care, catering to a wide range of unique and
               small-sized pets.
             </p>
           </div>
-          <div className="why-vector mt-24">
-            <div className="vector1 wh-vector">
-              <img src={doctor} alt="" />
-              <p className="vector-description w-3/4">
+          <div className="why-vector my-20">
+            <div className="wh-vector w-80 max-lg:w-[]">
+              <img className ="h-28 max-xl:h-24 max-lg:h-24 max-md:h-20 max-sm:h-16" src={doctor} alt="" />
+              <p className="vector-description w-3/5 font-semibold my-4 text-xl max-xl:text-lg max-lg:text-base max-md:text-base max-sm:text-sm">
                 Expert pet care by qualified team
               </p>
             </div>
-            <div className="vector2 wh-vector">
-              <img src={hospital} alt="" />
-              <p className="vector-description w-3/4">
+            <div className="wh-vector w-80 max-lg:w-[]">
+              <img className ="h-28 max-xl:h-24 max-lg:h-24 max-md:h-20 max-sm:h-16" src={hospital} alt="" />
+              <p className="vector-description w-3/5 font-semibold my-4 text-xl max-xl:text-lg max-lg:text-base max-md:text-base max-sm:text-sm">
                 State-of-the art facilities
               </p>
             </div>
-            <div className="vector3 wh-vector">
-              <img src={advice} alt="" />
-              <p className="vector-description w-3/4">
+            <div className="wh-vector w-80">
+              <img className ="h-28 max-xl:h-24 max-lg:h-24 max-md:h-20 max-sm:h-16" src={advice} alt="" />
+              <p className="vector-description w-3/5 font-semibold my-4 text-xl max-xl:text-lg max-lg:text-base max-md:text-base max-sm:text-sm">
                 Advice on nutirition and husbandry
               </p>
             </div>
           </div>
         </div>
       </section>
-      <section>
+      <section id ="ourServices">
         <div className="our_services mt-24">
           <div className="heading text-8xl font-bold">
             <p className="animal-heading">
@@ -404,7 +403,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section id ="testimonials">
         <div className="why-choose-us mt-24">
           <div className="heading text-8xl font-bold mb-10">
             <p className="animal-heading">
@@ -444,7 +443,7 @@ export default function Home() {
           </div>
 
       </section>
-      <section className="w-full map py-10 max-xl:py-8">
+      <section id ="visitUs" className="w-full map py-10 max-xl:py-8" >
         <div className="heading text-8xl font-bold mt-12 max-lg:mt-20  max-md:mt-16">
           <h2 className="animal-heading">
             <span className="text-green">Visit</span> Us At
