@@ -107,8 +107,13 @@ export default function Home() {
           <h1> Compassion </h1>
           <h1> Conservation </h1>
         </div>
-        <video autoPlay={true} muted ={true} loop={true} className="backdrop h-full w-full opacity-30 z-0 object-cover">
-          <source src={require("../videos/landscape.mp4")} type="video/mp4"/>
+        <video
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          className="backdrop h-full w-full opacity-30 z-0 object-cover"
+        >
+          <source src={require("../videos/landscape.mp4")} type="video/mp4" />
         </video>
         <div className="cards">
           <Card
@@ -163,12 +168,20 @@ export default function Home() {
         </div>
         <div className="grid-animal-desc flex flex-row justify-center w-full my-12 flex-wrap gap-4 px-6 max:px-2">
           <AnimalCard
-            heading={"Reptiles"}
+            heading={"Birds"}
             description={
               "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
             }
-            imageUrl={"reptile"}
+            imageUrl={"bird"}
           />
+
+          <AnimalCard
+            heading={"Dogs & Cats"}
+            description={
+              "Having trouble finding a vet for your frog or axolotl? Look no more. Our skilled veterinarians offer advanced care for all amphibians."
+            }
+            imageUrl={"dogAndCat"}
+          />  
 
           <AnimalCard
             heading={"Rabbits"}
@@ -179,11 +192,11 @@ export default function Home() {
           />
 
           <AnimalCard
-            heading={"Birds"}
+            heading={"Reptiles"}
             description={
               "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
             }
-            imageUrl={"bird"}
+            imageUrl={"reptile"}
           />
 
           <AnimalCard
@@ -195,20 +208,13 @@ export default function Home() {
           />
 
           <AnimalCard
-            heading={"Fish"}
+            heading={"Turtle"}
             description={
               "Stars Vet offers a comprehensive array of services, including fish surgery, catering to fish of diverse shapes and sizes."
             }
-            imageUrl={"fish"}
+            imageUrl={"turtle"}
           />
 
-          <AnimalCard
-            heading={"Amphibians"}
-            description={
-              "Having trouble finding a vet for your frog or axolotl? Look no more. Our skilled veterinarians offer advanced care for all amphibians."
-            }
-            imageUrl={"amphibian"}
-          />
         </div>
         <div className="slider-animal-desc w-full my-12">
           <Swiper
@@ -225,17 +231,28 @@ export default function Home() {
             pagination={{
               clickable: true,
             }}
+            loop={true}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper w-[80%]  flex flex-row justify-center h-[20rem]"
           >
             <SwiperSlide>
               <AnimalCard
-                heading={"Reptiles"}
+                heading={"Birds"}
                 description={
                   "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
                 }
-                imageUrl={"reptile"}
+                imageUrl={"bird"}
+                className="m-auto mt-6"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <AnimalCard
+                heading={"Dogs & Cats"}
+                description={
+                  "Having trouble finding a vet for your frog or axolotl? Look no more. Our skilled veterinarians offer advanced care for all amphibians."
+                }
+                imageUrl={"dogAndCat"}
                 className="m-auto mt-6"
               />
             </SwiperSlide>
@@ -251,11 +268,11 @@ export default function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <AnimalCard
-                heading={"Birds"}
+                heading={"Reptiles"}
                 description={
                   "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
                 }
-                imageUrl={"bird"}
+                imageUrl={"reptile"}
                 className="m-auto mt-6"
               />
             </SwiperSlide>
@@ -271,21 +288,11 @@ export default function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <AnimalCard
-                heading={"Fish"}
+                heading={"Turtle"}
                 description={
                   "Stars Vet offers a comprehensive array of services, including fish surgery, catering to fish of diverse shapes and sizes."
                 }
-                imageUrl={"fish"}
-                className="m-auto mt-6"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AnimalCard
-                heading={"Amphibians"}
-                description={
-                  "Having trouble finding a vet for your frog or axolotl? Look no more. Our skilled veterinarians offer advanced care for all amphibians."
-                }
-                imageUrl={"amphibian"}
+                imageUrl={"turtle"}
                 className="m-auto mt-6"
               />
             </SwiperSlide>
@@ -525,11 +532,11 @@ function AnimalCard({ heading, description, imageUrl, className }) {
   return (
     <>
       <div className={`reptile-card relative ${className}`}>
-        <div className="h-full w-3/5 text-left pr-6">
+        <div className="h-full w-3/5 text-left pr-2">
           <h2 className="text-3xl font-semibold">{heading}</h2>
           <div className="flex flex-col justify-between h-3/4">
             <p className="mt-2 text-xs">{description}</p>
-            <a href="#" className="font-semibold">
+            <a href="#" className="font-semibold h-10">
               More information
             </a>
           </div>
@@ -538,7 +545,7 @@ function AnimalCard({ heading, description, imageUrl, className }) {
           <img
             src={require(`../images/${imageUrl}.png`)}
             alt="icon"
-            className="absolute top-0 -right-6 h-80"
+            className="absolute top-0 -right-7 h-80"
           />
           <div className="circle"></div>
         </div>
