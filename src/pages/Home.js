@@ -101,13 +101,15 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <section className="bg-green w-full pt-12 home relative" id ="home">
-        <div className="home-header text-left font-extrabold text-teal text-8xl ml-16 bottom-20 absolute">
+      <section className="bg-green w-full pt-12 home relative" id="home">
+        <div className="home-header text-left font-extrabold text-teal text-8xl ml-16 max-md:ml-12 bottom-20 absolute z-[1]">
           <h1> Care </h1>
           <h1> Compassion </h1>
           <h1> Conservation </h1>
         </div>
-
+        <video autoPlay={true} muted ={true} loop={true} className="backdrop h-full w-full opacity-30 z-0 object-cover">
+          <source src={require("../videos/landscape.mp4")} type="video/mp4"/>
+        </video>
         <div className="cards">
           <Card
             heading={"Book Appoinment"}
@@ -134,7 +136,10 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id ="banner" className="bg-teal w-full h-[42rem] relative rounded-tl-3xl rounded-tr-3xl -mt-6 banner-content">
+      <section
+        id="banner"
+        className="bg-teal w-full h-[42rem] relative rounded-tl-3xl rounded-tr-3xl -mt-6 banner-content"
+      >
         <div className="banner w-full h-52 bg-green text-teal mb-28 bottom-0 left-1/2 transform -translate-x-1/2 absolute py-4 px-8 flex flex-col justify-center items-center">
           <h3 className="font-semibold text-4xl">Welcome to the</h3>
           <h2 className="font-semibold text-7xl mt-2">
@@ -145,7 +150,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section id ="speciesWeTreat" className="w-full">
+      <section id="speciesWeTreat" className="w-full">
         <div className="text-8xl font-bold">
           <p className="animal-heading">
             <span className="text-green">Exotic Pets</span> We Treat
@@ -287,7 +292,7 @@ export default function Home() {
           </Swiper>
         </div>
       </section>
-      <section id ="whyChooseUs">
+      <section id="whyChooseUs">
         <div className="mt-32 max-md:mt-[6rem]">
           <div className="heading text-8xl font-bold">
             <p className="animal-heading">
@@ -302,19 +307,31 @@ export default function Home() {
           </div>
           <div className="why-vector my-20 max-lg:my-12 max-md:my-11">
             <div className="wh-vector w-80 max-lg:w-[]">
-              <img className ="h-28 max-xl:h-24 max-lg:h-24 max-md:h-20 max-sm:h-16" src={doctor} alt="" />
+              <img
+                className="h-28 max-xl:h-24 max-lg:h-24 max-md:h-20 max-sm:h-16"
+                src={doctor}
+                alt=""
+              />
               <p className="vector-description w-3/5 font-semibold my-4 text-xl max-xl:text-lg max-lg:text-base max-md:text-base max-sm:text-sm">
                 Expert pet care by qualified team
               </p>
             </div>
             <div className="wh-vector w-80 max-lg:w-[]">
-              <img className ="h-28 max-xl:h-24 max-lg:h-24 max-md:h-20 max-sm:h-16" src={hospital} alt="" />
+              <img
+                className="h-28 max-xl:h-24 max-lg:h-24 max-md:h-20 max-sm:h-16"
+                src={hospital}
+                alt=""
+              />
               <p className="vector-description w-3/5 font-semibold my-4 text-xl max-xl:text-lg max-lg:text-base max-md:text-base max-sm:text-sm">
                 State-of-the art facilities
               </p>
             </div>
             <div className="wh-vector w-80">
-              <img className ="h-28 max-xl:h-24 max-lg:h-24 max-md:h-20 max-sm:h-16" src={advice} alt="" />
+              <img
+                className="h-28 max-xl:h-24 max-lg:h-24 max-md:h-20 max-sm:h-16"
+                src={advice}
+                alt=""
+              />
               <p className="vector-description w-3/5 font-semibold my-4 text-xl max-xl:text-lg max-lg:text-base max-md:text-base max-sm:text-sm">
                 Advice on nutirition and husbandry
               </p>
@@ -322,7 +339,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id ="ourServices">
+      <section id="ourServices">
         <div className="mt-32 max-md:mt-[6rem]">
           <div className="heading text-8xl font-bold">
             <p className="animal-heading">
@@ -403,47 +420,46 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id ="testimonials">
+      <section id="testimonials">
         <div className="mt-32 max-md:mt-[6rem]">
           <div className="heading text-8xl font-bold mb-10">
             <p className="animal-heading">
               <span className="text-green">Testimonials</span>
             </p>
           </div>
-            <div className="CustomerReviewCards pl-48" ref={sliderRef}>
-              <CustomerReviewCards
-                name={review[0].name}
-                date={review[0].date}
-                title={review[0].title}
-                description={review[0].description}
-                img={review[0].img}
-              />
-              <CustomerReviewCards
-                name={review[0].name}
-                date={review[0].date}
-                title={review[0].title}
-                description={review[0].description}
-                img={review[0].img}
-              />
-              <CustomerReviewCards
-                name={review[0].name}
-                date={review[0].date}
-                title={review[0].title}
-                description={review[0].description}
-                img={review[0].img}
-              />
-              <CustomerReviewCards
-                name={review[0].name}
-                date={review[0].date}
-                title={review[0].title}
-                description={review[0].description}
-                img={review[0].img}
-              />
-            </div>
+          <div className="CustomerReviewCards pl-48" ref={sliderRef}>
+            <CustomerReviewCards
+              name={review[0].name}
+              date={review[0].date}
+              title={review[0].title}
+              description={review[0].description}
+              img={review[0].img}
+            />
+            <CustomerReviewCards
+              name={review[0].name}
+              date={review[0].date}
+              title={review[0].title}
+              description={review[0].description}
+              img={review[0].img}
+            />
+            <CustomerReviewCards
+              name={review[0].name}
+              date={review[0].date}
+              title={review[0].title}
+              description={review[0].description}
+              img={review[0].img}
+            />
+            <CustomerReviewCards
+              name={review[0].name}
+              date={review[0].date}
+              title={review[0].title}
+              description={review[0].description}
+              img={review[0].img}
+            />
           </div>
-
+        </div>
       </section>
-      <section id ="visitUs" className="w-full map py-10 max-xl:py-8" >
+      <section id="visitUs" className="w-full map py-10 max-xl:py-8">
         <div className="heading text-8xl font-bold mt-32 max-md:mt-[6rem]">
           <h2 className="animal-heading">
             <span className="text-green">Visit</span> Us At

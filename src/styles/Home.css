@@ -748,6 +748,9 @@
   .home-header h1 {
     font-size: 3rem;
   }
+  .cards {
+    bottom: -380px;
+  }
   .card{
     height: 240px;
     width: 100%;
@@ -803,7 +806,7 @@
     border-radius: 12px;
   }
   .banner-content {
-    height: 60rem;
+    height: 62rem;
   }
   .mySwiper {
     width: 98%;
