@@ -409,7 +409,7 @@
     height: 50px;
   }
   .header-icon img {
-    height: 1.75rem;
+    height: 50%;
   }
 
   .reptile-card {
@@ -440,6 +440,7 @@
   }
   .animal-heading {
     font-size: 5.2rem;
+    text-align: center;
   }
   .animal-description {
     font-size: 1rem;
@@ -642,6 +643,19 @@
     width: 90%;
   }
 
+  .description{
+    margin-top: 12px;
+  }
+
+  .description p {
+    font-size: 0.9rem;
+    line-height: 0.95rem;
+  }
+
+  .description a {
+    margin-top: 12px
+  }
+
   .footer {
     height: 20rem;
   }
@@ -716,6 +730,12 @@
     font-size: 0.65rem;
     line-height: 0.75rem;
   }
+  .reptile-card a {
+    font-size: 0.75rem;
+  }
+  .reptile-card img {
+    height: 16rem;
+  }
   .reptile-card h2 {
     font-size: 1.4rem;
   }
@@ -728,10 +748,22 @@
   .home-header h1 {
     font-size: 3rem;
   }
+  .card{
+    height: 240px;
+    width: 100%;
+  }
   .card .description {
-    font-size: 0.8rem;
-    line-height: 0.9rem;
+    font-size: 0.75rem;
+    line-height: 0.8rem;
     margin-top: 8px;
+  }
+  .card .header h3{
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+  .header-icon{
+    width: 40px;
+    height: 40px;
   }
   .footer {
     height: 16rem;
@@ -769,5 +801,51 @@
     margin: 2rem auto;
     margin-bottom: 4rem;
     border-radius: 12px;
+  }
+  .banner-content {
+    height: 60rem;
+  }
+  .mySwiper {
+    width: 98%;
+  }
+  .swiper-button-prev, .swiper-button-next{
+    display: none;
+  }
+
+  .banner {
+    /* background = image location | repeat option | x y coordinates | size */
+    background: url("../images/dog.svg") no-repeat -110px 20px / 60%,
+      url("../images/cat.svg") no-repeat 170% 20px / 60%;
+    background-color: var(--green);
+  }
+  
+  .banner h2{
+    font-size: 2.5rem;
+    width: 22rem;
+    margin: 0;
+  }
+  .banner h3{
+    font-size: 1.25rem;
+  }
+
+  .banner p {
+    font-size: 0.75rem;
+  }
+
+  .animal-heading{
+    font-size: 3.25rem;
+    width: 20rem;
+  }
+  .animal-description {
+    font-size: 0.8rem;
+    width: 85%;
+    margin-top: 1.5rem;
+  }
+  #testimonials .animal-heading{
+    font-size: 3rem;
+  }
+  .wh-vector p{
+    font-size: 0.64rem;
+    font-weight: 600;
   }
 }
