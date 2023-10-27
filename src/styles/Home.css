@@ -744,12 +744,13 @@
 @media (max-width: 480px) {
   .home-header {
     margin-left: 1rem;
+    bottom: 6rem;
   }
   .home-header h1 {
     font-size: 3rem;
   }
   .cards {
-    bottom: -380px;
+    bottom: -400px;
   }
   .card{
     height: 240px;
