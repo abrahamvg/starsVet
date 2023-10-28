@@ -241,6 +241,10 @@
   z-index: 1;
 }
 
+.swiper-wrapper {
+  width: 100vw
+}
+
 .leaflet-container {
   height: 32rem;
   width: 72%;

@@ -46,6 +46,8 @@ export default function Home() {
     zoom: 19,
   };
 
+  const [happyAnimalSlides, setHappyAnimalSlides] = useState(5);
+
   const sliderRef = useRef(null);
   let mouseDown = false;
   let startX, scrollLeft;
@@ -79,6 +81,31 @@ export default function Home() {
       sliderRef.current.addEventListener("mouseleave", stopDragging, false);
     }
 
+    const updateSlidesPerView = () => {
+      const viewportWidth = window.innerWidth;
+
+      if (viewportWidth >= 1280) {
+        setHappyAnimalSlides(6);
+      }else if (viewportWidth >= 1000) {
+        setHappyAnimalSlides(5);
+      } 
+      else if (viewportWidth >= 768) {
+        setHappyAnimalSlides(4);
+      }else if (viewportWidth >= 600){
+        setHappyAnimalSlides(3);
+      }else if (viewportWidth >= 480){
+        setHappyAnimalSlides(2);
+      }else{
+        setHappyAnimalSlides(1)
+      }
+    };
+
+    // Initial update
+    updateSlidesPerView();
+
+    // Event listener for window resize
+    window.addEventListener('resize', updateSlidesPerView);
+
     // Cleanup event listeners when the component unmounts
     return () => {
       if (sliderRef.current) {
@@ -95,8 +122,21 @@ export default function Home() {
           false
         );
       }
+
+      window.removeEventListener('resize', updateSlidesPerView);
     };
+
   }, []);
+
+  const happyPetsFilenames = [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+  ];
 
   return (
     <>
@@ -111,7 +151,7 @@ export default function Home() {
           autoPlay={true}
           muted={true}
           loop={true}
-          className="backdrop h-full w-full opacity-30 z-0 object-cover"
+          className="backdrop h-full w-full opacity-20 z-0 object-cover"
         >
           <source src={require("../videos/landscape.mp4")} type="video/mp4" />
         </video>
@@ -181,7 +221,7 @@ export default function Home() {
               "Having trouble finding a vet for your frog or axolotl? Look no more. Our skilled veterinarians offer advanced care for all amphibians."
             }
             imageUrl={"dogAndCat"}
-          />  
+          />
 
           <AnimalCard
             heading={"Rabbits"}
@@ -214,10 +254,10 @@ export default function Home() {
             }
             imageUrl={"turtle"}
           />
-
         </div>
         <div className="slider-animal-desc w-full my-12">
           <Swiper
+            rewind={true}
             spaceBetween={30}
             centeredSlides={true}
             style={{
@@ -231,7 +271,7 @@ export default function Home() {
             pagination={{
               clickable: true,
             }}
-            loop={true}
+            loop = {true}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper w-[80%]  flex flex-row justify-center h-[20rem]"
@@ -425,6 +465,27 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section id="meetOurPets">
+        <div className="mt-32 max-md:mt-[6rem]">
+          <div className="heading text-8xl font-bold">
+            <p className="animal-heading">
+              Meet our <span className="text-green">Happy Pets</span>
+            </p>
+          </div>
+        </div>
+        <div className="w-full h-[30rem] max-xl:h-96 max-lg:mt-12  mt-16 pl-2 flex items-center">
+          <Swiper slidesPerView={happyAnimalSlides} rewind={true} className="h-fit">
+            {happyPetsFilenames.map((filename, index) => (
+              <SwiperSlide key={index}>
+                <div className="h-96 w-[98%] max-xl:h-80 max-lg:h-72 max-md:h-80 max-xl:rounded-sm rounded-md shadow-md" style={{
+                  backgroundImage: `url(` + require(`../images/gallery/${filename}.jpeg`)+ `)`,
+                  backgroundSize: 'cover',
+                }}></div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
       <section id="testimonials">
