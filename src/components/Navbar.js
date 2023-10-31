@@ -17,7 +17,7 @@ export default function Navbar() {
         <ul class="menuItem">
           <li><a href="#">Species We Treat</a></li>
           <li><a href="#">Services</a></li>
-          <li><a href="#">Location</a></li>
+          <li><a href="https://maps.app.goo.gl/hs7gXQZtQrCjbMJ3A">Location</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="nav-items flex-row gap-10">
         <a className="nav-item nav-item-arrow" id="species">Species We Treat</a>
         <a className="nav-item nav-item-arrow" id="services">Services</a>
-        <a className="nav-item" id="location">Location</a>
+        <a className="nav-item" id="location" href="https://maps.app.goo.gl/hs7gXQZtQrCjbMJ3A">Location</a>
         <a className="nav-item" id="about">About Us</a>
         <a className="nav-item" id="contact">Contact Us</a>
       </div>

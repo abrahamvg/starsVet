@@ -28,7 +28,7 @@ import Aryan from "../images/Aryan.jpeg";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import "../styles/Home.css";
-//import "leaflet/dist/leaflet.css";
+
 
 export default function Home() {
   var review = [
@@ -40,6 +40,7 @@ export default function Home() {
       img: Aryan,
     },
   ];
+
 
   let state = {
     center: [26.90252478221893, 75.75198555898737],
@@ -86,17 +87,16 @@ export default function Home() {
 
       if (viewportWidth >= 1280) {
         setHappyAnimalSlides(6);
-      }else if (viewportWidth >= 1000) {
+      } else if (viewportWidth >= 1000) {
         setHappyAnimalSlides(5);
-      } 
-      else if (viewportWidth >= 768) {
+      } else if (viewportWidth >= 768) {
         setHappyAnimalSlides(4);
-      }else if (viewportWidth >= 600){
+      } else if (viewportWidth >= 600) {
         setHappyAnimalSlides(3);
-      }else if (viewportWidth >= 480){
+      } else if (viewportWidth >= 480) {
         setHappyAnimalSlides(2);
-      }else{
-        setHappyAnimalSlides(1)
+      } else {
+        setHappyAnimalSlides(1);
       }
     };
 
@@ -104,7 +104,7 @@ export default function Home() {
     updateSlidesPerView();
 
     // Event listener for window resize
-    window.addEventListener('resize', updateSlidesPerView);
+    window.addEventListener("resize", updateSlidesPerView);
 
     // Cleanup event listeners when the component unmounts
     return () => {
@@ -123,20 +123,11 @@ export default function Home() {
         );
       }
 
-      window.removeEventListener('resize', updateSlidesPerView);
+      window.removeEventListener("resize", updateSlidesPerView);
     };
-
   }, []);
 
-  const happyPetsFilenames = [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-  ];
+  const happyPetsFilenames = ["1", "2", "3", "4", "5", "6", "7"];
 
   return (
     <>
@@ -162,6 +153,7 @@ export default function Home() {
             description={
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             }
+            link={"https://calendly.com/starsvet/appointment/"}
           />
 
           <Card
@@ -198,7 +190,8 @@ export default function Home() {
       <section id="speciesWeTreat" className="w-full">
         <div className="text-8xl font-bold">
           <p className="animal-heading">
-            <span className="text-green">Exotic Pets</span> We Treat
+            <span className="text-green">Exotic & Companion Pets</span> <br />
+            We Treat
           </p>
           <p className="animal-description w-1/2 mx-auto text-base mt-8 font-thin">
             We take pride in being your top choice as pet doctors. Our expertise
@@ -271,7 +264,7 @@ export default function Home() {
             pagination={{
               clickable: true,
             }}
-            loop = {true}
+            loop={true}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper w-[80%]  flex flex-row justify-center h-[20rem]"
@@ -476,13 +469,24 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-[30rem] max-xl:h-96 max-lg:mt-12  mt-16 pl-2 flex items-center">
-          <Swiper slidesPerView={happyAnimalSlides} rewind={true} className="h-fit">
+          <Swiper
+            slidesPerView={happyAnimalSlides}
+            rewind={true}
+            className="h-fit"
+          >
             {happyPetsFilenames.map((filename, index) => (
               <SwiperSlide key={index}>
-                <div className="h-96 w-[98%] max-xl:h-80 max-lg:h-72 max-md:h-80 max-xl:rounded-sm rounded-md shadow-md" style={{
-                  backgroundImage: `url(` + require(`../images/gallery/${filename}.jpeg`)+ `)`,
-                  backgroundSize: 'cover',
-                }}></div>
+                <div
+                  className="h-96 w-[98%] max-xl:h-80 max-lg:h-72 max-md:h-80 max-xl:rounded-sm rounded-md shadow-md"
+                  style={{
+                    backgroundImage:
+                      `url(` +
+                      require(`../images/gallery/${filename}.jpeg`) +
+                      `)`,
+                    backgroundSize: "cover",
+                    backgroundPositionX: "center",
+                  }}
+                ></div>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -533,40 +537,20 @@ export default function Home() {
             <span className="text-green">Visit</span> Us At
           </h2>
         </div>
-        <MapContainer
-          center={state.center}
-          zoom={state.zoom}
-          scrollWheelZoom={false}
-        >
-          <TileLayer
-            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
-          />
-          <Marker
-            position={state.center}
-            eventHandlers={{
-              dblclick: (e) => {
-                window.open(
-                  "https://www.google.com/maps/place/Stars+Vet+Animal+and+Bird+Clinic/@26.9026889,75.751359,18.5z/data=!4m6!3m5!1s0x396db3e2327609c5:0x86bf91c39ce4aee!8m2!3d26.9025137!4d75.7519906!16s%2Fg%2F11skvtvsgv?entry=ttu"
-                );
-              },
-            }}
-          >
-            <Popup>
-              <img className="inline h-10" src="logo192.png" alt="logo" />
-              <p className="font-bold text-aquaBlue">
-                Stars Vet Animal & Bird Clinic
-              </p>
-            </Popup>
-          </Marker>
-        </MapContainer>
+        <iframe
+          title="Google Maps"
+          loading="eager"
+          allowFullScreen = {true}
+          src={"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3558.0258090517577!2d75.751973!3d26.902676!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3e2327609c5%3A0x86bf91c39ce4aee!2sStars%20Vet%20Animal%20and%20Bird%20Clinic!5e0!3m2!1sen!2sus!4v1698785660456!5m2!1sen!2sus"}
+          className="mapsGoogle"
+        ></iframe>
       </section>
       <Footer />
     </>
   );
 }
 
-function Card({ heading, imageUrl, description }) {
+function Card({ heading, imageUrl, description,link }) {
   return (
     <div className="card">
       <div className="header">
@@ -581,7 +565,7 @@ function Card({ heading, imageUrl, description }) {
       </div>
       <div className="description flex flex-col justify-between">
         <p className="block">{description}</p>
-        <a href="#" className="font-semibold">
+        <a href={link} className="font-semibold" target="_blank">
           Know More
         </a>
       </div>
