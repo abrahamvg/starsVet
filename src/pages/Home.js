@@ -23,24 +23,40 @@ import vaccine from "../images/vaccine.svg";
 import pad from "../images/writing_pad.svg";
 import blob_service from "../images/blob_service.svg";
 import blob_mam_service from "../images/mam.png";
-import Aryan from "../images/Aryan.jpeg";
+import image from "../images/personIcon.png";
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, EffectCoverflow} from "swiper/modules";
+
 
 import "../styles/Home.css";
 
-
 export default function Home() {
-  var review = [
+  var reviews = [
     {
-      name: "Aryan Kalra",
-      date: "17 July 2023",
-      title: "Co-Founder, Imaginary Company",
-      description: "Abc",
-      img: Aryan,
+      name: "Rao Pets Delhi",
+      date: "5 months ago",
+      title: "Genuine and Reliable Vet",
+      description:
+        "If you are looking for a genuine and reliable vet !! There you are , Dr Rituja is well educated well knowledgeable and humble person. I am from delhi and here is no exotic pet vet available. My frnd gave her reference and She did the surgery for my bird, and kept under observation ! Returned me as we were expecting ! All the best Stars Vet team.",
+      img: image,
+    },
+    {
+      name: "Rao Pets Delhi",
+      date: "5 months ago",
+      title: "Genuine and Reliable Vet",
+      description:
+        "If you are looking for a genuine and reliable vet !! There you are , Dr Rituja is well educated well knowledgeable and humble person. I am from delhi and here is no exotic pet vet available. My frnd gave her reference and She did the surgery for my bird, and kept under observation ! Returned me as we were expecting ! All the best Stars Vet team.",
+      img: image,
+    },
+    {
+      name: "Rao Pets Delhi",
+      date: "5 months ago",
+      title: "Genuine and Reliable Vet",
+      description:
+        "If you are looking for a genuine and reliable vet !! There you are , Dr Rituja is well educated well knowledgeable and humble person. I am from delhi and here is no exotic pet vet available. My frnd gave her reference and She did the surgery for my bird, and kept under observation ! Returned me as we were expecting ! All the best Stars Vet team.",
+      img: image,
     },
   ];
-
 
   let state = {
     center: [26.90252478221893, 75.75198555898737],
@@ -127,7 +143,18 @@ export default function Home() {
     };
   }, []);
 
-  const happyPetsFilenames = ["1", "2", "3", "4", "5", "6", "7"];
+  const happyPetsFilenames = [
+    "1",
+    "4",
+    "8",
+    "2",
+    "9",
+    "5",
+    "6",
+    "10",
+    "7",
+    "11",
+  ];
 
   return (
     <>
@@ -142,9 +169,17 @@ export default function Home() {
           autoPlay={true}
           muted={true}
           loop={true}
-          className="backdrop h-full w-full opacity-20 z-0 object-cover"
+          className="backdrop h-full w-full opacity-10 z-0 object-cover landscape-video"
         >
           <source src={require("../videos/landscape.mp4")} type="video/mp4" />
+        </video>
+        <video
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          className="backdrop h-full w-full opacity-10 z-0 object-cover potrait-video"
+        >
+          <source src={require("../videos/potrait.mp4")} type="video/mp4" />
         </video>
         <div className="cards">
           <Card
@@ -203,7 +238,7 @@ export default function Home() {
           <AnimalCard
             heading={"Birds"}
             description={
-              "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
+              "Our specialized care extends to all avian species, guaranteeing exceptional treatment for your feathered friends."
             }
             imageUrl={"bird"}
           />
@@ -211,7 +246,7 @@ export default function Home() {
           <AnimalCard
             heading={"Dogs & Cats"}
             description={
-              "Having trouble finding a vet for your frog or axolotl? Look no more. Our skilled veterinarians offer advanced care for all amphibians."
+              "Having trouble finding a vet for your dog or cat ? Look no more. Our skilled veterinarians offer advanced care for your companions."
             }
             imageUrl={"dogAndCat"}
           />
@@ -500,34 +535,16 @@ export default function Home() {
             </p>
           </div>
           <div className="CustomerReviewCards pl-48" ref={sliderRef}>
-            <CustomerReviewCards
-              name={review[0].name}
-              date={review[0].date}
-              title={review[0].title}
-              description={review[0].description}
-              img={review[0].img}
-            />
-            <CustomerReviewCards
-              name={review[0].name}
-              date={review[0].date}
-              title={review[0].title}
-              description={review[0].description}
-              img={review[0].img}
-            />
-            <CustomerReviewCards
-              name={review[0].name}
-              date={review[0].date}
-              title={review[0].title}
-              description={review[0].description}
-              img={review[0].img}
-            />
-            <CustomerReviewCards
-              name={review[0].name}
-              date={review[0].date}
-              title={review[0].title}
-              description={review[0].description}
-              img={review[0].img}
-            />
+            {reviews.map((review, index) => (
+                <CustomerReviewCards
+                  name={review.name}
+                  date={review.date}
+                  title={review.title}
+                  description={review.description}
+                  img={review.img}
+                  key={review.id}
+                />
+            ))}
           </div>
         </div>
       </section>
@@ -540,8 +557,10 @@ export default function Home() {
         <iframe
           title="Google Maps"
           loading="eager"
-          allowFullScreen = {true}
-          src={"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3558.0258090517577!2d75.751973!3d26.902676!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3e2327609c5%3A0x86bf91c39ce4aee!2sStars%20Vet%20Animal%20and%20Bird%20Clinic!5e0!3m2!1sen!2sus!4v1698785660456!5m2!1sen!2sus"}
+          allowFullScreen={true}
+          src={
+            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3558.0258090517577!2d75.751973!3d26.902676!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3e2327609c5%3A0x86bf91c39ce4aee!2sStars%20Vet%20Animal%20and%20Bird%20Clinic!5e0!3m2!1sen!2sus!4v1698785660456!5m2!1sen!2sus"
+          }
           className="mapsGoogle"
         ></iframe>
       </section>
@@ -550,7 +569,7 @@ export default function Home() {
   );
 }
 
-function Card({ heading, imageUrl, description,link }) {
+function Card({ heading, imageUrl, description, link }) {
   return (
     <div className="card">
       <div className="header">
@@ -565,7 +584,7 @@ function Card({ heading, imageUrl, description,link }) {
       </div>
       <div className="description flex flex-col justify-between">
         <p className="block">{description}</p>
-        <a href={link} className="font-semibold" target="_blank">
+        <a href={link} className="font-semibold hover:font-bold cursor-pointer" target="_blank">
           Know More
         </a>
       </div>
@@ -602,7 +621,7 @@ function AnimalCard({ heading, description, imageUrl, className }) {
 // import noise from "../../assets/noise.webp";
 function CustomerReviewCards(props) {
   return (
-    <div className="review">
+    <div className="review mx-auto">
       <div className="review_header">
         <div className="review_photo">
           <img src={props.img} alt="" />
