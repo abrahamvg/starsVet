@@ -169,7 +169,7 @@ export default function Home() {
           autoPlay={true}
           muted={true}
           loop={true}
-          className="backdrop h-full w-full opacity-10 z-0 object-cover landscape-video"
+          className="backdrop h-full w-full opacity-40 z-0 object-cover landscape-video"
         >
           <source src={require("../videos/landscape.mp4")} type="video/mp4" />
         </video>
@@ -177,7 +177,7 @@ export default function Home() {
           autoPlay={true}
           muted={true}
           loop={true}
-          className="backdrop h-full w-full opacity-10 z-0 object-cover potrait-video"
+          className="backdrop h-full w-full opacity-40 z-0 object-cover potrait-video"
         >
           <source src={require("../videos/potrait.mp4")} type="video/mp4" />
         </video>
@@ -205,6 +205,7 @@ export default function Home() {
             description={
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             }
+            link={"https://calendly.com/starsvet/home-visit"}
           />
         </div>
       </section>
@@ -235,20 +236,21 @@ export default function Home() {
           </p>
         </div>
         <div className="grid-animal-desc flex flex-row justify-center w-full my-12 flex-wrap gap-4 px-6 max:px-2">
-          <AnimalCard
-            heading={"Birds"}
-            description={
-              "Our specialized care extends to all avian species, guaranteeing exceptional treatment for your feathered friends."
-            }
-            imageUrl={"bird"}
-          />
-
+          
           <AnimalCard
             heading={"Dogs & Cats"}
             description={
               "Having trouble finding a vet for your dog or cat ? Look no more. Our skilled veterinarians offer advanced care for your companions."
             }
             imageUrl={"dogAndCat"}
+          />
+
+          <AnimalCard
+            heading={"Birds"}
+            description={
+              "Our specialized care extends to all avian species, guaranteeing exceptional treatment for your feathered friends."
+            }
+            imageUrl={"bird"}
           />
 
           <AnimalCard
@@ -306,21 +308,21 @@ export default function Home() {
           >
             <SwiperSlide>
               <AnimalCard
-                heading={"Birds"}
-                description={
-                  "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
-                }
-                imageUrl={"bird"}
-                className="m-auto mt-6"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <AnimalCard
                 heading={"Dogs & Cats"}
                 description={
                   "Having trouble finding a vet for your frog or axolotl? Look no more. Our skilled veterinarians offer advanced care for all amphibians."
                 }
                 imageUrl={"dogAndCat"}
+                className="m-auto mt-6"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <AnimalCard
+                heading={"Birds"}
+                description={
+                  "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
+                }
+                imageUrl={"bird"}
                 className="m-auto mt-6"
               />
             </SwiperSlide>
@@ -584,7 +586,7 @@ function Card({ heading, imageUrl, description, link }) {
       </div>
       <div className="description flex flex-col justify-between">
         <p className="block">{description}</p>
-        <a href={link} className="font-semibold hover:font-bold cursor-pointer" target="_blank">
+        <a href={link} className="font-semibold hover:font-bold cur" target="_blank">
           Know More
         </a>
       </div>
