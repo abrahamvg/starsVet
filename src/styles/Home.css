@@ -775,13 +775,17 @@
   }
   .cards {
     bottom: -400px;
+    padding: 0 16px;
   }
   .card{
     height: 240px;
     width: 100%;
   }
-  .card .description {
+  .card .description p {
     font-size: 0.75rem;
+  }
+  .card .description {
+    font-size: 0.85rem;
     line-height: 0.8rem;
     margin-top: 8px;
   }

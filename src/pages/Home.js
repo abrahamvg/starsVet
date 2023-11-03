@@ -186,7 +186,7 @@ export default function Home() {
             heading={"Book Appoinment"}
             imageUrl={"book-appointment"}
             description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "We offer Professional, Reliable and Convenient healthcare services for your beloved pet. Book an appointment on your preferred date and time through our online portal"
             }
             link={"https://calendly.com/starsvet/appointment/"}
           />
@@ -195,17 +195,18 @@ export default function Home() {
             heading={"Online Consultation"}
             imageUrl={"online-consultation"}
             description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "Your exotic and companion animals Vet is just a click away. Book a hassle-free appointment for online consultation."
             }
+            link={"https://calendly.com/starsvet/online-consultation/"}
           />
 
           <Card
             heading={"Home Visit"}
             imageUrl={"home-visit"}
             description={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "Enjoy our professional and emergency healthcare service at the comfort of your home. Schedule a home visit today!"
             }
-            link={"https://calendly.com/starsvet/home-visit"}
+            link={"https://calendly.com/starsvet/home-visit/"}
           />
         </div>
       </section>
