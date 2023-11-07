@@ -177,7 +177,7 @@ export default function Home() {
           autoPlay={true}
           muted={true}
           loop={true}
-          className="backdrop h-full w-full opacity-40 z-0 object-cover potrait-video"
+          className="backdrop h-full w-full opacity-60 z-0 object-cover potrait-video"
         >
           <source src={require("../videos/potrait.mp4")} type="video/mp4" />
         </video>
