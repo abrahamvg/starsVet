@@ -525,11 +525,11 @@
     height: 9.25rem;
     margin-top: 3rem;
   }
-  .social-links li {
+  .social-links a {
     width: 2.25rem;
     height: 2.25rem;
   }
-  .social-links ul {
+  .social-links div {
     gap: 0.9rem;
   }
   .links li {
@@ -691,11 +691,11 @@
     height: 7rem;
     margin-top: 4rem;
   }
-  .social-links li {
+  .social-links a {
     width: 1.5rem;
     height: 1.5rem;
   }
-  .social-links ul {
+  .social-links div {
     gap: 0.5rem;
   }
   .links {
@@ -807,11 +807,11 @@
     height: 6rem;
     margin-top: 4rem;
   }
-  .social-links li {
+  .social-links a {
     width: 1.2rem;
     height: 1.2rem;
   }
-  .social-links ul {
+  .social-links div {
     gap: 0.75rem;
   }
   .links {

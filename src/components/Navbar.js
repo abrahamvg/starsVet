@@ -3,10 +3,10 @@ import "../styles/Navbar.css";
 
 export default function Navbar() {
   return (
-    <div className="bg-teal h-16 p-4 grid justify-between navbar fixed w-full top-0 left-0 z-10">
+    <div className="bg-teal shadow-sm h-16 p-4 grid justify-between navbar fixed w-full top-0 left-0 z-10">
       <div className="logo">
         <img className="inline" src="logo192.png" alt="logo" />
-        <a className="inline">Stars Vet Animal & Bird Clinic</a>
+        <a href="/">Stars Vet Animal & Bird Clinic</a>
       </div>
 
       <div className="hamburger">

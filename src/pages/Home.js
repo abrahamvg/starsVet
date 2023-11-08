@@ -1,13 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import {
-  TileLayer,
-  Marker,
-  Popup,
-  MapContainer,
-  useMapEvents,
-} from "react-leaflet";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -25,7 +18,7 @@ import blob_service from "../images/blob_service.svg";
 import blob_mam_service from "../images/mam.png";
 import image from "../images/personIcon.png";
 // import required modules
-import { Autoplay, Pagination, Navigation, EffectCoverflow} from "swiper/modules";
+import { Autoplay, Pagination, Navigation} from "swiper/modules";
 
 
 import "../styles/Home.css";
@@ -57,11 +50,6 @@ export default function Home() {
       img: image,
     },
   ];
-
-  let state = {
-    center: [26.90252478221893, 75.75198555898737],
-    zoom: 19,
-  };
 
   const [happyAnimalSlides, setHappyAnimalSlides] = useState(5);
 
@@ -169,7 +157,7 @@ export default function Home() {
           autoPlay={true}
           muted={true}
           loop={true}
-          className="backdrop h-full w-full opacity-40 z-0 object-cover landscape-video"
+          className="backdrop h-full w-full opacity-60 z-0 object-cover landscape-video"
         >
           <source src={require("../videos/landscape.mp4")} type="video/mp4" />
         </video>
@@ -621,7 +609,6 @@ function AnimalCard({ heading, description, imageUrl, className }) {
   );
 }
 
-// import noise from "../../assets/noise.webp";
 function CustomerReviewCards(props) {
   return (
     <div className="review mx-auto">
