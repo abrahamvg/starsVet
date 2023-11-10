@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <div className='w-full h-96 bg-green rounded-tl-3xl rounded-tr-3xl flex flex-row footer'>
         <div className="social w-1/5 h-full">
-            <img className="inline mt-8 mx-auto" src="logo192.png" alt="logo" />
+            <img className="inline mt-8 mx-auto" src={require(`../images/logo/logo192.png`)} alt="logo" />
             <div className="social-links">
                 <div className='flex flex-row justify-center gap-4 mt-4'>
                     <a target='_blank' href='https://x.com/stars_vet' className="bg-teal w-12 h-12 rounded-full flex justify-center items-center flex-col "><FaXTwitter className='w-3/5 h-3/5'/></a>

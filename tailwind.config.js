@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -8,7 +9,8 @@ module.exports = {
     colors: {
       green: "#06a37e",
       teal: "#fefef2",
-      aquaBlue: "#021939"
+      aquaBlue: "#021939",
+      caribbeanGreen: "#01CB9B",
     }
   },
   plugins: [],
