@@ -14,14 +14,15 @@ export default function Rabbit() {
     <>
       <Navbar />
       <section className="w-full relative">
-        <div className="h-[44rem]">
-          <div className="mt-4 absolute -top-32 -left-10 z-1">
+        <div className="h-[44rem] max-lg:h-[42rem] max-md:h-[36rem] max-sm:h-[32rem]">
+          <div className="mt-4 absolute -top-32 -left-10 z-1 max-xl:-left-[24rem] max-lg:-top-48 max-md:-top-72 max-lg:-left-[40rem] max-sm:-top-80">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1920"
               height="739"
               viewBox="0 0 1920 739"
               fill="none"
+              className="h-full"
             >
               <g filter="url(#filter0_i_436_187)">
                 <path
@@ -73,16 +74,20 @@ export default function Rabbit() {
               </defs>
             </svg>
           </div>
-          <div className="absolute top-56 left-1/2 -translate-x-1/2 text-teal flex flex-col items-center">
-            <h1 className=" text-9xl font-semibold "> Rabbits</h1>
-            <p className=" w-4/5 text-lg">
+          <div className="absolute top-56 left-1/2 -translate-x-1/2 text-teal flex flex-col items-center max-lg:top-44 max-lg:w-3/5 max-md:top-36 max-md:w-4/5 max-sm:top-32">
+            <h1 className=" text-9xl font-semibold max-lg:text-8xl max-sm:text-[5rem]">
+              Rabbits
+            </h1>
+            <p
+              className=" w-4/5 text-lg max-lg:text-base leading-5 max-md:mt-2 max-md:text-sm max-sm:w-full max-sm:text-[0.8rem] max-sm:leading-4"
+            >
               Searching for a vet who can treat your pet rabbit? search no more,
               you’ve found us!
             </p>
             <a
               href="#"
               target="_blank"
-              className="bg-caribbeanGreen px-4 py-3 rounded-md mt-8 text-xl"
+              className="bg-caribbeanGreen px-4 py-3 rounded-md mt-8 text-xl max-md:text-base max-md:px-3 max-md:py-2 max-sm:mt-6"
             >
               Book Appointment
             </a>
@@ -105,7 +110,11 @@ export default function Rabbit() {
         <div className="px-28 my-4 mt-20 flex flex-row justify-between items-center max-2xl:px-20 max-xl:px-12 max-xl:my-12 max-lg:flex-col max-lg:my-28 max-md:px-8 max-md:my-[6rem]">
           <div>
             <h3 className="hidden font-bold max-xl:text-6xl max-lg:block max-md:w-4/5 max-md:text-[3rem] mx-auto max-sm:text-[2.75rem]">
-              Did You <span className="text-green max-md:text-7xl max-sm:text-6xl"> Know ?</span>
+              Did You{" "}
+              <span className="text-green max-md:text-7xl max-sm:text-6xl">
+                {" "}
+                Know ?
+              </span>
             </h3>
             <img
               src={require(`../../images/species/Rabbit/rabbit.png`)}
