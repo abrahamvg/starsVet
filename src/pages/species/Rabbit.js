@@ -166,7 +166,7 @@ export default function Rabbit() {
             <span className="text-green">Services</span>
           </h2>
         </div>
-        <div className="w-3/5 mx-auto flex flex-row flex-wrap justify-center gap-4 mt-12 max-xl:w-4/5 max-lg:mt-8 max-md:w-4/5">
+        <div className="w-3/5 mx-auto flex flex-row flex-wrap justify-center gap-4 mt-12 max-xl:w-4/5 max-lg:mt-8 max-md:w-full">
           {services.map((service) => (
             <div className="font-semibold text-lg px-6 py-4 border-2 w-fit border-green rounded-md hover:bg-green hover:text-teal hover:cursor-default max-lg:px-3 max-lg:py-2 max-md:text-base max-sm:text-sm">
               {service}

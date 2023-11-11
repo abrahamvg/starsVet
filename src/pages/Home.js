@@ -22,6 +22,7 @@ import { Autoplay, Pagination, Navigation} from "swiper/modules";
 
 
 import "../styles/Home.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   var reviews = [
@@ -224,7 +225,7 @@ export default function Home() {
             care, catering to a wide range of unique and small-sized pets.
           </p>
         </div>
-        <div className="grid-animal-desc flex flex-row justify-center w-full my-12 flex-wrap gap-4 px-6 max:px-2">
+        <div className="grid-animal-desc flex flex-row justify-center mx-auto w-4/5 my-12 flex-wrap gap-4 px-6 max:px-2 max-2xl:w-full">
           
           <AnimalCard
             heading={"Dogs & Cats"}
@@ -248,6 +249,7 @@ export default function Home() {
               "With extensive knowledge, experience, and skill, we excel in maintaining the health of rabbits, surpassing mere carrot-based care."
             }
             imageUrl={"rabbit"}
+            link={"species/rabbit"}
           />
 
           <AnimalCard
@@ -323,6 +325,7 @@ export default function Home() {
                 }
                 imageUrl={"rabbit"}
                 className="m-auto mt-6"
+                link={"species/rabbit"}
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -583,7 +586,7 @@ function Card({ heading, imageUrl, description, link }) {
   );
 }
 
-function AnimalCard({ heading, description, imageUrl, className }) {
+function AnimalCard({ heading, description, imageUrl, className, link }) {
   return (
     <>
       <div className={`reptile-card relative ${className}`}>
@@ -591,9 +594,9 @@ function AnimalCard({ heading, description, imageUrl, className }) {
           <h2 className="text-3xl font-semibold">{heading}</h2>
           <div className="flex flex-col justify-between h-3/4">
             <p className="mt-2 text-xs">{description}</p>
-            <a href="#" className="font-semibold h-10">
+            <Link to={link} className="font-semibold h-10">
               More information
-            </a>
+            </Link>
           </div>
         </div>
         <div className="h-full w-2/5">
