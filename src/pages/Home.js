@@ -258,6 +258,7 @@ export default function Home() {
               "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
             }
             imageUrl={"reptile"}
+            link={"species/reptile"}
           />
 
           <AnimalCard
@@ -335,6 +336,7 @@ export default function Home() {
                   "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
                 }
                 imageUrl={"reptile"}
+                link={"species/reptile"}
                 className="m-auto mt-6"
               />
             </SwiperSlide>

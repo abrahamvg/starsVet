@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Rabbit from "./pages/species/Rabbit";
+import Reptile from "./pages/species/Reptile";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/species">
             <Route path="rabbit" element={<Rabbit />} />
+            <Route path="reptile" element={<Reptile />} />
           </Route>
         </Routes>
       </Router>
