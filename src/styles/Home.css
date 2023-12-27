@@ -120,6 +120,8 @@
   margin-top: 40px;
 
   background: var(--green);
+  position: absolute;
+  z-index: -2;
 }
 .slider-animal-desc {
   display: none;

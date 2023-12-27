@@ -267,6 +267,7 @@ export default function Home() {
               "Stars Vet specializes in guinea pigs, providing superior care, treatment, and support to ensure optimal health for your beloved companions."
             }
             imageUrl={"guineaPig"}
+            link={"species/guineaPig"}
           />
 
           <AnimalCard
@@ -347,6 +348,7 @@ export default function Home() {
                   "Stars Vet specializes in guinea pigs, providing superior care, treatment, and support to ensure optimal health for your beloved companions."
                 }
                 imageUrl={"guineaPig"}
+                link={"species/guineaPig"}
                 className="m-auto mt-6"
               />
             </SwiperSlide>
@@ -605,7 +607,7 @@ function AnimalCard({ heading, description, imageUrl, className, link }) {
           <img
             src={require(`../images/${imageUrl}.png`)}
             alt="icon"
-            className="absolute top-0 -right-7 h-80"
+            className="absolute top-0 -right-7 h-80 z-[-1]"
           />
           <div className="circle"></div>
         </div>
