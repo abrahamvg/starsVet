@@ -1,7 +1,8 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Birds from "./pages/species/Birds";
 import Rabbit from "./pages/species/Rabbit";
 import Reptile from "./pages/species/Reptile";
 import GuineaPig from "./pages/species/GuineaPig";
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/species">
+            <Route path="birds" element={<Birds />}/>
             <Route path="rabbit" element={<Rabbit />} />
             <Route path="reptile" element={<Reptile />} />
             <Route path="guineaPig" element={<GuineaPig />} />

@@ -241,6 +241,7 @@ export default function Home() {
               "Our specialized care extends to all avian species, guaranteeing exceptional treatment for your feathered friends."
             }
             imageUrl={"bird"}
+            link={"species/birds"}
           />
 
           <AnimalCard
@@ -317,6 +318,7 @@ export default function Home() {
                 }
                 imageUrl={"bird"}
                 className="m-auto mt-6"
+                link={"species/birds"}
               />
             </SwiperSlide>
             <SwiperSlide>

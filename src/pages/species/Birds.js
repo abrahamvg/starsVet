@@ -3,17 +3,19 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
 export default function Reptile() {
-    const services = [
-        'General health check-ups including nutrition or housing checks',
-        'Complete blood profile and specific laboratory test’s',
-        'Emergency care',
-        'Soft tissue and orthopaedic surgery and ophthalmology services',
-        'Hospitalisation with dedicated ward and custom enclosures',
-        'Sexing',
-        'Behaviour analysis and discussion',
-        'Advanced diagnostic imaging (x-rays, ultrasounds and endoscopy)',
-        'Hospitalisation with dedicated ward and custom enclosures'
-      ];
+  const services = [
+    "General health check-up",
+    "Blood test and DNA blood sexing",
+    "Beak and Nail Trimming",
+    "Eye treatment and Surgery",
+    "Beak replacement and wing transplant [imping]",
+    "Nutrition and housing guidelines",
+    "X-Ray, Anaesthesia and surgery with hospitalization",
+    "Desexing",
+    "Pathological lab testing and faecal testing",
+    "Chlamydia and lead testing",
+    "Breeding and chronic egg-laying",
+  ];
   return (
     <>
       <Navbar />
@@ -80,11 +82,11 @@ export default function Reptile() {
           </div>
           <div className="absolute top-56 left-1/2 -translate-x-1/2 text-teal flex flex-col items-center max-lg:top-44 max-lg:w-3/5 max-md:top-36 max-md:w-4/5 max-sm:top-32">
             <h1 className=" text-9xl font-semibold max-lg:text-8xl max-sm:text-[5rem] max-[400px]:text-[4rem]">
-              Reptiles
+              Birds
             </h1>
             <p className=" w-4/5 text-lg max-lg:text-base mt-8 leading-5 max-md:mt-6 max-md:text-sm max-sm:w-full max-sm:text-[0.8rem] max-sm:leading-4">
-              Searching for a vet who can treat your pet reptiles? search no
-              further, you've found us!
+              Searching for a vet who can treat your most loved pet bird, search
+              no more. We are here!!
             </p>
             <a
               href="#"
@@ -99,39 +101,22 @@ export default function Reptile() {
       <section>
         <div className="flex flex-col items-center">
           <h3 className="text-6xl text-green font-medium w-3/5 tracking-tight max-2xl:text-5xl max-xl:w-4/5 max-md:text-4xl max-sm:text-3xl">
-            Providing The Best Veterinary Service To Your Beloved Reptiles
+            Providing The Best Veterinary Service For Your Pet Bird
           </h3>
           <p className=" w-[60%] my-8 text-lg leading-6 font-light max-2xl:text-base max-xl:text-sm max-xl:mt-6 max-xl:w-4/5 max-md:text-sm max-sm:text-[0.75rem] max-sm:leading-4">
-            With tremendous experience with reptiles, Stars Vet proudly calls
-            itself exotic specialist as we host animals of different shapes and
-            sizes, fur and feathers – and even scales.
-          </p>
-          <p className=" w-[75%] mt-12 mb-16 text-xl leading-8 font-light max-xl:text-lg max-xl:mt-10 max-xl:mb-14 max-xl:w-[90%] max-lg:my-20 max-md:text-sm max-sm:text-[0.75rem] max-sm:leading-4 max-md:my-12 max-sm:p-2">
-            Our knowledge of reptiles extends past the norm, covering the entire
-            spectrum of reptiles such as{" "}
-            <strong className="font-semibold">
-              snakes (both pythons and elapids), lizards (dragons,
-              monitors/goannas, skinks, and geckos), and chelonians (tortoises
-              and turtles).{" "}
-            </strong>
-            Your cold-blooded companions will be in the best of hands – and can
-            look forward to a continuously happy and healthy life. Each reptile
-            species has its own dietary, managemental and environmental
-            requirements.
+            Stars Vet is one of the best avian and exotic animal hospital and we
+            treat from finches to macaws, parrots and every species of birds out
+            there.
           </p>
         </div>
-        <div className="px-28 my-4 mt-20 flex flex-row justify-between items-center max-2xl:px-20 max-xl:px-12 max-xl:my-32 max-lg:flex-col max-md:px-8 max-md:my-[6rem] max-sm:p-6 max-md:mt-8">
+        <div className="px-28 my-16 flex flex-row justify-between items-center max-2xl:px-20 max-xl:px-12 max-xl:my-32 max-lg:flex-col max-md:px-8 max-md:my-[6rem] max-sm:p-6 max-md:mt-8">
           <div>
             <h3 className="hidden font-bold max-xl:text-6xl max-lg:block max-lg:text-center max-md:text-6xl mx-auto max-sm:text-5xl">
-              Why{" "}
-              <span className="text-green">
-                {" "}
-                Choose{" "}
-              </span>
+              Why <span className="text-green"> Choose </span>
               Us ?
             </h3>
             <img
-              src={require(`../../images/species/Reptile/reptile.png`)}
+              src={require(`../../images/species/Birds/birds.png`)}
               className="mx-auto relative -top-5 h-[38rem] -rotate-[5deg] max-2xl:h-[28rem] max-xl:h-[24rem] max-lg:top-0 max-lg:mt-4 max-lg:h-[28rem] max-md:h-80 max-sm:h-72 max-[400px]:h-64"
               alt=""
             />
@@ -141,11 +126,9 @@ export default function Reptile() {
               Why <span className="text-green">Choose </span> Us ?
             </h3>
             <ul className="list-[circle] mt-4 text-lg leading-8 font-light max-xl:text-[1rem] max-xl:leading-8  max-lg:p-4 max-lg:rounded-md max-lg:text-left max-md:text-base max-sm:text-sm max-md:leading-7 max-sm:leading-6 max-sm:px-2 max-[400px]:p-4 max-[400px]:leading-5 max-[400px]:text-[0.85rem]">
-              {
-                services.map((service) => (
-                    <li className="max-md:mb-2" > {service}</li>
-                ))
-              }
+              {services.map((service) => (
+                <li className="max-md:mb-2"> {service}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -160,17 +143,13 @@ export default function Reptile() {
               </span>
             </h3>
             <p className="w-4/5 mt-2 text-lg leading-6 font-light max-2xl:mt-4 max-2xl:text-base max-xl:w-4/5 max-lg:my-8 max-lg:leading-5 max-sm:text-[0.75rem] max-sm:w-full max-sm:leading-4">
-              The decision to have pet reptile goes beyond reptile care itself.
-              It is a case of time, dedication and responsibility, but it can
-              very rewarding for you and your pet reptile/s. <br /> <br /> The
-              Stars Vets team will educate you on how best to meet your pet’s
-              nutrition, enclosure preparation and management, as well as
-              day-to-day care. When it comes to the health and happiness of your
-              pet reptile, you can always count on us for personalised care and
-              trusted service.
+              Birds are delicate creatures and require special care when they’re
+              not well. Stars Vet is specialized in avian species and have an
+              experienced team with great knowledge and dedication to care for
+              your loved ones.
             </p>
           </div>
-          <div>
+          <div> 
             <img
               src={require(`../../images/mam.png`)}
               className="relative -top-5 h-[32rem] max-xl:h-[24rem] max-lg:top-0 max-md:h-80 max-sm:h-72"
@@ -179,20 +158,7 @@ export default function Reptile() {
           </div>
         </div>
       </section>
-      {/* <section>
-        <div className="heading text-8xl font-bold mt-32 max-lg:mt-28 max-md:mt-[6rem]">
-          <h2 className="animal-heading">
-            <span className="text-green">Services</span>
-          </h2>
-        </div>
-        <div className="w-3/5 mx-auto flex flex-row flex-wrap justify-center gap-4 mt-12 max-xl:w-4/5 max-lg:mt-8 max-md:w-full">
-          {services.map((service) => (
-            <div className="font-semibold text-lg px-6 py-4 border-2 w-fit border-green rounded-md hover:bg-green hover:text-teal hover:cursor-default max-lg:px-3 max-lg:py-2 max-md:text-base max-sm:text-sm">
-              {service}
-            </div>
-          ))}
-        </div>
-      </section> */}
+
       <section id="visitUs" className="w-full map py-10 max-xl:py-8">
         <div className="heading text-8xl font-bold mt-32 max-lg:mt-28 max-md:mt-[6rem]">
           <h2 className="animal-heading">
