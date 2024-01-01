@@ -241,7 +241,7 @@ export default function Home() {
               "Our specialized care extends to all avian species, guaranteeing exceptional treatment for your feathered friends."
             }
             imageUrl={"bird"}
-            link={"species/birds"}
+            link={"/species/birds"}
           />
 
           <AnimalCard
@@ -250,7 +250,7 @@ export default function Home() {
               "With extensive knowledge, experience, and skill, we excel in maintaining the health of rabbits, surpassing mere carrot-based care."
             }
             imageUrl={"rabbit"}
-            link={"species/rabbit"}
+            link={"/species/rabbit"}
           />
 
           <AnimalCard
@@ -259,7 +259,7 @@ export default function Home() {
               "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
             }
             imageUrl={"reptile"}
-            link={"species/reptile"}
+            link={"/species/reptile"}
           />
 
           <AnimalCard
@@ -268,7 +268,7 @@ export default function Home() {
               "Stars Vet specializes in guinea pigs, providing superior care, treatment, and support to ensure optimal health for your beloved companions."
             }
             imageUrl={"guineaPig"}
-            link={"species/guineaPig"}
+            link={"/species/guineaPig"}
           />
 
           <AnimalCard
@@ -318,7 +318,7 @@ export default function Home() {
                 }
                 imageUrl={"bird"}
                 className="m-auto mt-6"
-                link={"species/birds"}
+                link={"/species/birds"}
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -329,7 +329,7 @@ export default function Home() {
                 }
                 imageUrl={"rabbit"}
                 className="m-auto mt-6"
-                link={"species/rabbit"}
+                link={"/species/rabbit"}
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -339,7 +339,7 @@ export default function Home() {
                   "Our expertise extends to caring for all reptiles, from bearded dragons to snakes, ensuring exceptional treatment for your scaly companions."
                 }
                 imageUrl={"reptile"}
-                link={"species/reptile"}
+                link={"/species/reptile"}
                 className="m-auto mt-6"
               />
             </SwiperSlide>
@@ -350,7 +350,7 @@ export default function Home() {
                   "Stars Vet specializes in guinea pigs, providing superior care, treatment, and support to ensure optimal health for your beloved companions."
                 }
                 imageUrl={"guineaPig"}
-                link={"species/guineaPig"}
+                link={"/species/guineaPig"}
                 className="m-auto mt-6"
               />
             </SwiperSlide>

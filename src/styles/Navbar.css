@@ -29,9 +29,22 @@
 
     font-weight: 500;
 }
-.navbar a:hover{
+.nav-item:hover{
     color: var(--green);
     cursor: pointer;
+}
+
+.species:hover .inner-nav-species {
+    display: block;
+}
+
+.inner-nav-species{
+    color: var(--blue);
+    display: none;
+}
+
+.inner-nav-species a:hover{
+    color: var(--green);
 }
 
 .nav-item{
@@ -107,7 +120,7 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    padding: 50px;
+    padding: 50px 0px;
     padding-top: 125px;
     background: var(--green);
     list-style-type: none;
@@ -126,14 +139,16 @@
     font-size: 22px;
 }
 
-.menuItem a {
+.nav-item-mobile {
     transition: padding 0.5s cubic-bezier(0.77,0.2,0.05,1.0), 
     color 0.25s cubic-bezier(0.77,0.2,0.05,1.0);
     &:hover {
       padding-left: 10px;
       color: var(--teal);
+      cursor: pointer;
     }
 }
+
 @media(max-width:991px) {
     .nav-items {
         display: none;
