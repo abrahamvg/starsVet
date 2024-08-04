@@ -23,7 +23,7 @@ export default function Footer() {
                 <li className='text-teal my-2 text-left text-lg' ><a href="#" className='hover:font-semibold' >Species We Treat</a></li>
                 <li className='text-teal my-2 text-left text-lg' ><a href="#" className='hover:font-semibold' >Services</a></li>
                 <li className='text-teal my-2 text-left text-lg' ><a href="#" className='hover:font-semibold' >FAQ</a></li>
-                <li className='text-teal my-2 text-left text-lg' ><a href="#" className='hover:font-semibold' >Contact Us</a></li>
+                <li className='text-teal my-2 text-left text-lg' ><a href="#" className='hover:font-semibold' >Contact Us : 9257695551, 1414519298</a></li>
             </ul>
         </div>
     </div>

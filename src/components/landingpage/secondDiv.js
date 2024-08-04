@@ -12,7 +12,7 @@ function SecondDiv(){
         <div className="Welcome">
             
             <h1 className="firstHeading">Welcome to the</h1>
-            <h1 className="secondHeading">Stars Vet Animal & Bird Clinic</h1>
+            <h1 className="secondHeading">Stars Vet Animal & Bird Hospital</h1>
             <p className="ff">lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
             <Cat/>
             <img className= "dog"src={abc} alt="" />

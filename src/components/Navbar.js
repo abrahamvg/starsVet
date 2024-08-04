@@ -12,7 +12,7 @@ export default function Navbar() {
           src={require(`../images/logo/logo192.png`)}
           alt="logo"
         />
-        <Link to="/">Stars Vet Animal & Bird Clinic</Link>
+        <Link to="/">Stars Vet Animal & Bird Hospital</Link>
       </div>
 
       <div className="hamburger">

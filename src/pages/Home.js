@@ -206,7 +206,7 @@ export default function Home() {
         <div className="banner w-full h-52 bg-green text-teal mb-28 bottom-0 left-1/2 transform -translate-x-1/2 absolute py-4 px-8 flex flex-col justify-center items-center">
           <h3 className="font-semibold text-4xl">Welcome to the</h3>
           <h2 className="font-semibold text-7xl mt-2">
-            Stars Vet Animal & Bird Clinic
+            Stars Vet Animal & Bird Hospital
           </h2>
           <p className="m-4">
             Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
